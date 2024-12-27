@@ -9,11 +9,7 @@ import { RouterView } from 'vue-router';
 
 <template>
   <Header class="header" />
-  <router-view v-slot="{ Component }">
-    <transition name="fade">
-      <component class="router" :is="Component" />
-    </transition>
-  </router-view>
+  <router-view />
 </template>
 
 
@@ -28,15 +24,5 @@ body {
   z-index: 9;
 }
 
-
-.router {
-  transition: .5s;
-}
-
-.fade-enter-active, .fade-leave-active {
-  opacity: 0;
-  /* transform: translateX(-20px); */
-  transform: scale(1.02);
-}
 
 </style>

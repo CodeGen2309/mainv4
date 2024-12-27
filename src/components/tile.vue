@@ -43,5 +43,7 @@ let props = defineProps(['title', 'img'])
   .tile__text {
     margin: 0; padding: 0;
     transform: skewX(-30deg);
+    font-weight: 100;
+    letter-spacing: 2px;
   }
 </style>
