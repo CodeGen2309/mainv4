@@ -54,7 +54,7 @@ let HeadLinks = [
 .header__main {
   transform: skewX(-40deg);
   background: white;
-  margin-left: -40px;
+  margin-left: -20px;
   padding: 20px 60px;
 }
 

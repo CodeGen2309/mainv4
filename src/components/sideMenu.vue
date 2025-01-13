@@ -11,8 +11,9 @@ let links = [
 <template>
 <div class="smenu">
   <div class="smenu__titleHolder">
-    <h1 class="smenu__title">Корпорация ЖБК - 1</h1>
-    <p class="smenu__subtitle">мы строим города</p>
+    <h1 class="smenu__title">Компания ЖБК - 1</h1>
+    <p class="smenu__subtitle">Созидание во имя повышения качества жизни</p>
+    <!-- <p class="smenu__subtitle">Белгород</p> -->
   </div>
 
 
@@ -42,11 +43,11 @@ let links = [
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 450px;
+  min-width: 400px;
 
   gap: 50px;
   padding: 20px;
-  padding-top: 100px;
+  padding-top: 90px;
 
   box-sizing: border-box;
 }
@@ -83,7 +84,7 @@ let links = [
   text-decoration: none;
   color: inherit;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 130%;
   letter-spacing: 4px;
   margin: 0; padding: 0;
 
@@ -94,7 +95,7 @@ let links = [
 
 .smenu__link:hover {
   /* padding: 0px 10px; */
-  font-size: 21px;
+  transform: scale(1.1) translateX(30px);
 }
 
 .smenu__link_active {

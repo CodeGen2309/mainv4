@@ -7,26 +7,20 @@ import tile from '../components/tile.vue';
 import router from '@/router';
 import videoBack from '@/components/videoBack.vue';
 
-let props = defineProps(['tiles', 'img'])
 
-
+let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
 
 
 async function enterAimation () {
   let topimg = document.querySelector('.app__img');
   let tiles = document.querySelectorAll('.app__tile');
 
-  
-
-  // animate(topimg, { opacity: 1}, { duration: 1 })
-  // animate(topimg, {scale: 1.05, translateX: '20px' }, { duration: 10 })
   animate(topimg, { opacity: 1, scale: 1.05, translateX: '20px' }, { duration: .8 })
 
-  animate(tiles,  { 
-    opacity: [0, 1], 
-    translateX: ['-50px', '0px'],
-  }, 
-  {duration: .3, delay: stagger(0.1)})
+  animate(tiles,  
+    {  opacity: [0, 1],  translateX: ['-50px', '0px'] },
+    { duration: .3, delay: stagger(0.1) }
+  )
 }
 
 
@@ -70,8 +64,9 @@ onMounted(enterAimation)
 
       <div class="app__imgHolder">
         <div class="app__imgCover"></div>
-        <img class="app__img inviz" :src="props.img">
-        <!-- <video-back class="app__img inviz"></video-back> -->
+        
+        <video-back v-if="props.isvideo" :video="props.videopath" class="app__img inviz" />
+        <img v-else class="app__img inviz" :src="props.img" />
       </div>
     </div>  
 

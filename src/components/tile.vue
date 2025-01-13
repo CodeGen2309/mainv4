@@ -36,6 +36,7 @@ let props = defineProps(['title', 'img'])
     bottom: 0; left: 0;
     padding: 15px 60px;
     background: white;
+    /* clip-path: polygon(0 0, 90% 0, 100% 40%, 100% 100%, 0 100%); */
 
     transform: skewX(30deg) translateX(-10%);
   }
@@ -43,7 +44,9 @@ let props = defineProps(['title', 'img'])
   .tile__text {
     margin: 0; padding: 0;
     transform: skewX(-30deg);
-    font-weight: 100;
+    /* font-weight: 500; */
+    color: rgba(0, 0, 0, .6);
+    font-size: 18px;
     letter-spacing: 2px;
   }
 </style>

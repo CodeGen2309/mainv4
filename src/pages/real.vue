@@ -1,17 +1,27 @@
 <script setup>
-import tile from '../components/tile.vue';
 import mainView from '../views/mainView.vue'
 
-let mainImg = '/public/img/tstm.jpg'
+let devpath = '/public'
+let prodpath = '.'
+let currpath = prodpath
+
+let mainImg = `${currpath}/img/tstm.jpg`
+let mainVideo = `${currpath}/test.mp4`
 
 let mytiles = [
-  {title: 'Обьекты строительства', img: '/public/img/13.jpg'},
-  {title: 'Купить квартиру', img: '/public/img/tiles/nedv/kommnew.jpg'},
-  {title: 'Гаражи', img: '/public/img/tiles/nedv/garages.jpg'},
+  {title: 'Обьекты строительства', img: `${currpath}/img/13.jpg`},
+  {title: 'Купить квартиру', img: `${currpath}/img/tiles/nedv/kommnew.jpg`},
+  {title: 'Гаражи', img: `${currpath}/img/tiles/nedv/garages.jpg`},
 ]
+
+
+// ПЕРЕД БИЛДОМ ПОМЕНЯЙ ПУТИ К АССЕТАМ
 </script>
 
 <template>
-  <main-view :tiles="mytiles" :img="mainImg"></main-view>
+  <main-view 
+  :isvideo="true" :videopath="mainVideo"
+  :tiles="mytiles" :img="mainImg">
+  </main-view>
 </template>
 
