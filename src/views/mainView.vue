@@ -60,7 +60,7 @@ onMounted(enterAimation)
 <template>
   <section class="app">
     <div class="app__top">
-      <side-menu @goClick="goTo" />
+      <side-menu class="app__smenu" @goClick="goTo" />
 
       <div class="app__imgHolder">
         <div class="app__imgCover"></div>
@@ -114,6 +114,10 @@ body {
   overflow: hidden;
 }
 
+.app__smenu {
+  flex-shrink: 0;
+}
+
 
 
 .app__imgHolder {
@@ -132,7 +136,7 @@ body {
 
   background: linear-gradient(
     100deg,
-    white 7%,
+    white 10%,
     rgba(255, 255, 255, 0) 40%
   );
 
