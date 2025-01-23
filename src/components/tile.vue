@@ -1,26 +1,30 @@
 <script setup>
-let props = defineProps(['title', 'img'])
+let props = defineProps(['title', 'img', 'link'])
 
 
 </script>
 
 
 <template>
-  <div class="tile">
+  <a class="tile" :href="link">
     <img class="tile__img" :src="props.img">
     <div class="tile__textHolder">
       <p class="tile__text">{{ props.title }}</p>
     </div>
-  </div>
+  </a>
 </template>
 
 
 <style>
   .tile {
+    display: block;
     width: 100%; height: 100%;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+
+    text-decoration: none;
+    color: inherit;
   }
 
   .tile__img {

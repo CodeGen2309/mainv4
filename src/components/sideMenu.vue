@@ -37,16 +37,16 @@ let links = [
 
 
   <div class="smenu__icons">
-    <img class="smenu__icon" src="/public/icons/vk.svg">
-    <img class="smenu__icon" src="/public/icons/telegram.svg">
-    <img class="smenu__icon" src="/public/icons/youtube.svg">
+    <img class="smenu__icon" src="/public/v4sources/icons/vk.svg">
+    <img class="smenu__icon" src="/public/v4sources/icons/telegram.svg">
+    <img class="smenu__icon" src="/public/v4sources/icons/youtube.svg">
   </div>
 </div>
 </template>
 
 
 
-<style>
+<style scoped>
 .smenu {
   display: flex;
   flex-direction: column;

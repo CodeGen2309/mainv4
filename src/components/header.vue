@@ -1,5 +1,42 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
+import { Transition } from 'vue';
+
+import gmenu from '../../mocks/mainMenu.json'
+import menuSection from '@/components/menuSection.vue';
+
+let isMenuShow = ref(false)
+let isSubMenuShow = ref(false)
+let subMenu = ref({})
+let mainMenu = gmenu.mainMenu
+
+function toggleMenu () {
+  if (isMenuShow.value) {
+    isMenuShow.value = false
+    isSubMenuShow.value = false
+  }
+
+  else {
+    isMenuShow.value = true
+  }
+}
+
+
+function changeSubMenu (menuItem) {
+  let newMenu = {
+    cover: menuItem.img,
+    name: menuItem.subMenu,
+  }
+
+  isSubMenuShow.value = false
+  
+  setTimeout(() => {
+    subMenu.value = newMenu
+    isSubMenuShow.value = true
+  }, 200)
+}
+
+
 
 // let HeadLinks = []
 let HeadLinks = [
@@ -7,7 +44,6 @@ let HeadLinks = [
   {link: '#', text: 'Корпорация'},
   {link: '#', text: 'Недвижимость'},
 ]
-
 </script>
 
 
@@ -16,10 +52,11 @@ let HeadLinks = [
 <header class="header">
   <div class="header__main">
     <div class="header__inner">
-      <img class="header__logo" src="/public/icons/logo.svg">
+      <img class="header__logo" src="/public/v4sources/icons/logo.svg">
 
       <img class="header__menuIcon" 
-        src="/public/icons/menu.svg"
+        src="/public/v4sources/icons/menu.svg"
+        @click="toggleMenu"
       >
     </div>
   </div>
@@ -27,11 +64,28 @@ let HeadLinks = [
 
   <div class="header__phone">
     <div class="header__phone__inner">
-      <img class="header__phoneImg" src="/icons/phone.svg">
+      <img class="header__phoneImg" src="/public/v4sources/icons/phone.svg">
       <p class="header__phoneText"> +7 (4722) 37-63-33 </p>
     </div>
   </div>
 </header>
+
+<transition name = 'sideFade'>
+  <menuSection class="mainMenu"
+    :menu="mainMenu" v-if = "isMenuShow"
+    @hover="changeSubMenu"
+  >
+  </menuSection>
+</transition>
+
+<transition name = 'subFade'>
+  <menuSection class="subMenu"
+  :menu="gmenu[subMenu.name]"
+  :cover="subMenu.cover"
+    v-show="isSubMenuShow"
+  >
+  </menuSection>
+</transition>
 </template>
 
 
@@ -131,15 +185,24 @@ let HeadLinks = [
 }
 
 
+
+.header__menuIcon {
+  width: 20px;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+
 .mainMenu {
   position: absolute;
   top: 60px; left: 0;
   width: 300px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
   background: rgba(255, 255, 255, .8);
   backdrop-filter: blur(10px);
-
   transition: .3s;
 }
 
@@ -151,14 +214,24 @@ let HeadLinks = [
 }
 
 .mainMenu a {
-  margin: 0; padding: 20px;
+  /* margin: 0; padding: 10px; */
 }
 
+.subMenu {
+  position: absolute;
+  top: 60px; left: 320px;
+  z-index: 999;
+  margin: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .8);
+  backdrop-filter: blur(10px);
+  width: 400px;
 
-.header__menuIcon {
-  width: 20px;
-  cursor: pointer;
-  padding-left: 20px;
+  transition: .3s;
+}
+
+.subMenu::-webkit-scrollbar {
+  display: none;
 }
 
 

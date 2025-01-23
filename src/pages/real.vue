@@ -5,13 +5,25 @@ let devpath = '/public'
 let prodpath = '.'
 let currpath = prodpath
 
-let mainImg = `${currpath}/img/tstm.jpg`
-let mainVideo = `${currpath}/test.mp4`
+let mainImg = `${currpath}/v4sources/img/tstm.jpg`
+let mainVideo = `${currpath}/v4sources/test.mp4`
 
 let mytiles = [
-  {title: 'Обьекты строительства', img: `${currpath}/img/13.jpg`},
-  {title: 'Купить квартиру', img: `${currpath}/img/tiles/nedv/kommnew.jpg`},
-  {title: 'Гаражи', img: `${currpath}/img/tiles/nedv/garages.jpg`},
+  {
+    title: 'Обьекты строительства', 
+    img: `${currpath}/v4sources/img/13.jpg`,
+    link: 'https://belbeton.ru/real-estate/construction/buildings/',
+  },
+  {
+    title: 'Купить квартиру', 
+    img: `${currpath}/v4sources/img/tiles/nedv/kommnew.jpg`,
+    link: 'https://belbeton.ru/real-estate/price-list-for-property/',
+  },
+  {
+    title: 'Гаражи', 
+    img: `${currpath}/v4sources/img/tiles/nedv/garages.jpg`,
+    link: 'https://belbeton.ru/real-estate/construction/garages/',
+  },
 ]
 
 

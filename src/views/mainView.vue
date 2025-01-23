@@ -72,7 +72,7 @@ onMounted(enterAimation)
 
     <ul class="app__tileList">
       <li v-for="item in props.tiles" class="app__tileItem" :key="item.title">
-        <tile class="app__tile inviz" :title="item.title" :img="item.img"></tile>
+        <tile :link="item.link" class="app__tile inviz" :title="item.title" :img="item.img"></tile>
       </li>
     </ul>
   </section>

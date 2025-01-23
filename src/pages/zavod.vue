@@ -7,12 +7,27 @@ let currpath = prodpath
 
 
 let mytiles = [
-  {title: 'Интернет-магазин', img: `${currpath}/img/6.jpg`},
-  {title: 'Акции и скидки', img: `${currpath}/img/16.jpg`},
-  {title: 'Контакты', img: `${currpath}/img/tiles/zavod/conacts.jpg`},
+  {
+    title: 'Интернет-магазин', 
+    img: `${currpath}/v4sources/img/6.jpg`,
+    link: 'https://belbeton.ru/building-materials/catalog/',
+  },
+
+  {
+    title: 'Акции и скидки', 
+    img: `${currpath}/v4sources/img/16.jpg`,
+    link: 'https://belbeton.ru/building-materials/promotions-and-discounts/',
+  },
+
+  {
+    title: 'Контакты', 
+    img: `${currpath}/v4sources/img/tiles/zavod/conacts.jpg`,
+    link: 'https://belbeton.ru/building-materials/contacts/',
+  },
+
 ]
 
-let mainImg = `${currpath}/img/18.jpg`
+let mainImg = `${currpath}/v4sources/img/18.jpg`
 
 // ПЕРЕД БИЛДОМ ПОМЕНЯЙ ПУТИ К АССЕТАМ
 </script>
