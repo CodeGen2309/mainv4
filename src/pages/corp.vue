@@ -31,8 +31,8 @@ let mainImg = `${currpath}/v4sources/img/corp.jpg`
 
 <template>
   <mainview 
-    :tiles="myTiles" :img="mainImg">
-  </mainview>
+    :tiles="myTiles" :img="mainImg"
+  />
 </template>
 
 

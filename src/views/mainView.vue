@@ -46,8 +46,8 @@ async function goTo (link) {
 }
 
 
-function print (ent) {
-  console.log(ent);
+function print (something) {
+  console.log(something);
 }
 
 
@@ -139,7 +139,6 @@ body {
     white 10%,
     rgba(255, 255, 255, 0) 40%
   );
-
 
   transition: .3s;
 }

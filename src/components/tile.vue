@@ -48,7 +48,8 @@ let props = defineProps(['title', 'img', 'link'])
   .tile__text {
     margin: 0; padding: 0;
     transform: skewX(-30deg);
-    /* font-weight: 500; */
+    font-weight: 400;
+    font-family: 'biocad';
     color: rgba(0, 0, 0, .6);
     font-size: 18px;
     letter-spacing: 2px;

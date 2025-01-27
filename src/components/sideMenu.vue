@@ -1,8 +1,8 @@
 <script setup>
 let title = 'Компания ЖБК-1'
 // let title = 'Группа компаний ЖБК - 1'
-// let note = 'Созидание во имя повышения качества жизни'
-let note = 'Белгород'
+let note = 'Созидание во имя повышения качества жизни'
+// let note = 'Белгород'
 
 let links = [
   {link: '/', text: 'Корпорация'},
@@ -64,7 +64,7 @@ let links = [
   color: rgba(0, 0, 0, .8);
   letter-spacing: 5px;
   padding: 10px 0; margin: 0;
-  font-family: 'zekton';
+  font-family: 'biocad';
   font-weight: 700;
   border-bottom: 1px solid rgba(0, 0, 0, .4);
 }
@@ -75,7 +75,7 @@ let links = [
   font-weight: 100;
   font-size: 20px;
   letter-spacing: 2px;
-  font-family: 'czizh';
+  font-family: 'ac';
 }
 
 
@@ -92,11 +92,12 @@ let links = [
   position: relative;
   text-decoration: none;
   color: inherit;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 120%;
   letter-spacing: 4px;
   margin: 6px 0; padding: 5px 0;
-
+  font-family: 'hero';
+  color: rgba(0, 0, 0, .6);
 
   cursor: pointer;
   transition: .3s;
