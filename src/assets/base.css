@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'montserrat';
+  src: url(/v4sources/fonts/montserrat.ttf);
+}
+
+@font-face {
   font-family: 'caviar';
   src: url(/v4sources/fonts/caviar.ttf);
 }
@@ -29,27 +34,6 @@
   font-family: 'zekton';
   src: url(/v4sources/fonts/zekton.ttf);
 }
-
-
-@font-face {
-  font-family: 'biocad';
-  src: url('BiocadDisplay-Bold.eot');
-  src: url('/v4sources/fonts/BiocadDisplay-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'biocad';
-  src: url('BiocadDisplay-Regular.eot');
-  src: url('/v4sources/fonts/BiocadDisplay-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 
 
 body {

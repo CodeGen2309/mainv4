@@ -32,8 +32,8 @@ let mytiles = [
 
 <template>
   <main-view 
-    :isvideo="true" :videopath="mainVideo"
-    :tiles="mytiles" :img="mainImg"
-  />
+  :isvideo="true" :videopath="mainVideo"
+  :tiles="mytiles" :img="mainImg">
+  </main-view>
 </template>
 

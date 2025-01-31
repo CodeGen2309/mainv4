@@ -1,8 +1,8 @@
 <script setup>
 let title = 'Компания ЖБК-1'
 // let title = 'Группа компаний ЖБК - 1'
-let note = 'Созидание во имя повышения качества жизни'
-// let note = 'Белгород'
+// let note = 'Созидание во имя повышения качества жизни'
+let note = 'Белгород'
 
 let links = [
   {link: '/', text: 'Корпорация'},
@@ -62,9 +62,10 @@ let links = [
 .smenu__title {
   font-size: 30px;
   color: rgba(0, 0, 0, .8);
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   padding: 10px 0; margin: 0;
-  font-family: 'biocad';
+  /* font-family: 'zekton'; */
+  font-family: 'montserrat';
   font-weight: 700;
   border-bottom: 1px solid rgba(0, 0, 0, .4);
 }
@@ -72,10 +73,10 @@ let links = [
 
 .smenu__subtitle {
   margin: 0; padding: 10px 0;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 20px;
   letter-spacing: 2px;
-  font-family: 'ac';
+  font-family: 'montserrat';
 }
 
 
@@ -92,12 +93,12 @@ let links = [
   position: relative;
   text-decoration: none;
   color: inherit;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 120%;
+  font-family: 'zekton';
   letter-spacing: 4px;
   margin: 6px 0; padding: 5px 0;
-  font-family: 'hero';
-  color: rgba(0, 0, 0, .6);
+
 
   cursor: pointer;
   transition: .3s;

@@ -10,6 +10,8 @@ let isSubMenuShow = ref(false)
 let subMenu = ref({})
 let mainMenu = gmenu.mainMenu
 
+let leaveTimeOut = null
+
 function toggleMenu () {
   if (isMenuShow.value) {
     isMenuShow.value = false
@@ -22,6 +24,20 @@ function toggleMenu () {
 }
 
 
+function hideMenu () {
+  leaveTimeOut = setTimeout(() => {
+    isMenuShow.value = false
+    isSubMenuShow.value = false
+  }, 500)
+}
+
+
+function clearHideCounter () {
+  clearTimeout(leaveTimeOut)
+}
+
+
+
 function changeSubMenu (menuItem) {
   let newMenu = {
     cover: menuItem.img,
@@ -29,6 +45,7 @@ function changeSubMenu (menuItem) {
   }
 
   isSubMenuShow.value = false
+  clearTimeout(leaveTimeOut)
   
   setTimeout(() => {
     subMenu.value = newMenu
@@ -74,17 +91,18 @@ let HeadLinks = [
   <menuSection class="mainMenu"
     :menu="mainMenu" v-if = "isMenuShow"
     @hover="changeSubMenu"
-  >
-  </menuSection>
+    @leave="hideMenu"
+  />
 </transition>
 
 <transition name = 'subFade'>
   <menuSection class="subMenu"
-  :menu="gmenu[subMenu.name]"
-  :cover="subMenu.cover"
+    @hover="clearHideCounter"
+    @leave="hideMenu"
+    :menu="gmenu[subMenu.name]"
+    :cover="subMenu.cover"
     v-show="isSubMenuShow"
-  >
-  </menuSection>
+  />
 </transition>
 </template>
 

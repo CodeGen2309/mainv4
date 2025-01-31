@@ -1,15 +1,12 @@
 <script setup>
 defineProps(['cover', 'menu'])
 
-
-
-
 </script>
 
 
 
 <template>
-  <div class="smenu">
+  <div class="smenu" @mouseleave="$emit('leave')">
     <img class="smenu__cover" 
       v-if="cover" :src="cover"
     >
@@ -75,14 +72,14 @@ defineProps(['cover', 'menu'])
 .smenu__link {
   display: block;
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, .7);
 
   text-align: center;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1px;
 
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px 10px;
   margin: 0 10px;
   transition: .3s;
 }

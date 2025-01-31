@@ -49,8 +49,8 @@ let props = defineProps(['title', 'img', 'link'])
     margin: 0; padding: 0;
     transform: skewX(-30deg);
     font-weight: 400;
-    font-family: 'biocad';
-    color: rgba(0, 0, 0, .6);
+    /* color: rgba(0, 0, 0, .6); */
+    font-family: 'montserrat';
     font-size: 18px;
     letter-spacing: 2px;
   }
