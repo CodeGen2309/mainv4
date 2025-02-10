@@ -18,7 +18,6 @@ let links = [
   <div class="smenu__titleHolder">
     <h1 class="smenu__title">{{ title }}</h1>
     <p class="smenu__subtitle">{{ note }}</p>
-    <!-- <p class="smenu__subtitle">Белгород</p> -->
   </div>
 
 

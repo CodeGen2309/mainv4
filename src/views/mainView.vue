@@ -6,6 +6,7 @@ import sideMenu from '@/components/sideMenu.vue';
 import tile from '../components/tile.vue';
 import router from '@/router';
 import videoBack from '@/components/videoBack.vue';
+import mainSlider from '@/components/mainSlider.vue';
 
 
 let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
@@ -15,7 +16,7 @@ async function enterAimation () {
   let topimg = document.querySelector('.app__img');
   let tiles = document.querySelectorAll('.app__tile');
 
-  animate(topimg, { opacity: 1, scale: 1.05, translateX: '20px' }, { duration: .8 })
+  // animate(topimg, { opacity: 1, scale: 1.05, translateX: '20px' }, { duration: .8 })
 
   animate(tiles,  
     {  opacity: [0, 1],  translateX: ['-50px', '0px'] },
@@ -63,10 +64,11 @@ onMounted(enterAimation)
       <side-menu class="app__smenu" @goClick="goTo" />
 
       <div class="app__imgHolder">
-        <div class="app__imgCover"></div>
+        <!-- <div class="app__imgCover"></div> -->
         
-        <video-back v-if="props.isvideo" :video="props.videopath" class="app__img inviz" />
-        <img v-else class="app__img inviz" :src="props.img" />
+        <!-- <video-back v-if="props.isvideo" :video="props.videopath" class="app__img inviz" /> -->
+        <!-- <img v-else class="app__img inviz" :src="props.img" /> -->
+        <main-slider class="app__slider" />
       </div>
     </div>  
 
@@ -99,7 +101,7 @@ body {
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 4fr 2fr;
+  grid-template-rows: 5fr 2fr;
   gap: 20px;
 
   padding: 20px;
@@ -142,6 +144,11 @@ body {
 
 
   transition: .3s;
+}
+
+
+.app__slider {
+  height: 100%;
 }
 
 
