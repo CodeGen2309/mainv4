@@ -1,8 +1,5 @@
 <script setup>
-  import arrowIcon from '@/icons/arrow.svg'
-
-  let test = `${arrowIcon}`
-  
+    import arrow from './icons/arrow.vue';
 </script>
 
 
@@ -21,7 +18,7 @@
       <div class="sld__transformer sld__dockControlsHolder">
         <div class="sld__dockControls">
           <div class="sld__dockArrow sld__dockBack">
-            
+            <arrow class="sld__dockArrowIcon"></arrow>
           </div>
 
           <ul class="sld__dockDotList">
@@ -31,7 +28,7 @@
           </ul>
 
           <div class="sld__dockArrow sld__dockNext">
-            <img class="sld__dockArrowIcon" src="/public/v4sources/icons/arrow.svg" alt="">
+            <arrow class="sld__dockArrowIcon"></arrow>
           </div>
         </div>
       </div>
@@ -112,6 +109,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 
   flex-grow: 1;
   transform: skewX(-30deg);
@@ -124,15 +122,24 @@
 }
 
 .sld__dockArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  width: 30px;
 }
 
 .sld__dockArrowIcon {
-  color: white;
+  fill: white;
+  width: 100%; height: 100%;
 }
 
 .sld__dockBack {}
 
-.sld__dockNext {}
+.sld__dockNext {
+  transform: rotate(180deg);
+}
 
 .sld__dockDotList {
   display: flex;
