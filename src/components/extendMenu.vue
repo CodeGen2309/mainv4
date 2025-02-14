@@ -3,15 +3,6 @@
 </script>
 
 <template>
-  <div class="extMenu">
-    <ul class="extMenu__list">
-      <li class="extMenu__listItem" v-for="item in subMenu" :key="item.text">
-        <a class="extMenu__link" :href="item.link">
-          {{ item.text }}
-        </a>
-      </li>
-    </ul>
-  </div>
 </template>
 
 

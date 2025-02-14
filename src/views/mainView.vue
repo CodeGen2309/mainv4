@@ -1,6 +1,6 @@
 <script setup>
 import { animate, stagger } from 'motion';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import sideMenu from '@/components/sideMenu.vue';
 import tile from '../components/tile.vue';
@@ -10,6 +10,7 @@ import extendMenu from '@/components/extendMenu.vue';
 
 
 let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
+let extMenu = ref()
 
 
 async function enterAimation () {
@@ -36,6 +37,7 @@ async function leaveAnim () {
 }
 
 
+
 async function goTo (link) {
   let currRoute = router.currentRoute.value.name
   let isCurrLink = link == `/${currRoute}`
@@ -44,6 +46,17 @@ async function goTo (link) {
 
   await leaveAnim ()
   router.push(link)
+}
+
+
+function showExtMenu () {
+  console.log('SHOW EXT MENU');
+  extMenu.value = true
+}
+
+function hideExtMenu () {
+  console.log('HIDE EXT MENU');
+  extMenu.value = false
 }
 
 
@@ -61,11 +74,15 @@ onMounted(enterAimation)
 <template>
   <section class="app">
     <div class="app__top">
-      <side-menu class="app__smenu" @goClick="goTo" />
+      <side-menu class="app__smenu" @goClick="goTo" 
+        @mouseenter="showExtMenu" @mouseleave="hideExtMenu"
+      />
 
       <div class="app__imgHolder">
         <main-slider class="app__slider" />
-        <extend-menu class="app__extMenu" />
+        <transition name = "testAnim">
+          <extend-menu class="app__extMenu" v-show="extMenu" />
+        </transition>
       </div>
     </div>  
 
@@ -136,17 +153,22 @@ body {
   position: absolute;
   top: 0px; left: 0px; bottom: 0;
   width: 100%;
+  overflow: hidden;
 
-  background:linear-gradient(
-    110deg,
+  background: rgba(255, 255, 255, .9);
+  /* background:linear-gradient(
+    100deg,
     rgba(255, 255, 255, 1) 70%,
     rgba(0, 0, 0, 0) 
-  );
+  ); */
   
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .7);
   letter-spacing: 1px;
+  transition: .4s;
 }
+
 
 
 .app__img {
@@ -179,6 +201,12 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, .2); */
   flex-grow: 1.15;
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.testAnim-enter-active,
+.testAnim-leave-active {
+  transform: translateX(-10%);
+  opacity: 0;
 }
 
 
