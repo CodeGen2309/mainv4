@@ -1,0 +1,19 @@
+[
+  {
+    "img": "/public/v4sources/img/1.jpg",
+    "title": "Первый слайд",
+    "link": "link"
+  },
+
+  {
+    "img": "/public/v4sources/img/2.jpg",
+    "title": "Второй епта",
+    "link": "link"
+  },
+
+  {
+    "img": "/public/v4sources/img/3.jpg",
+    "title": "И третий",
+    "link": "link"
+  }
+]

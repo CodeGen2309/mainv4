@@ -1,12 +1,63 @@
 <script setup>
-    import arrow from './icons/arrow.vue';
+  import { onMounted, ref } from 'vue';
+
+  import arrow from './icons/arrow.vue';
+  import slidesData from '/mocks/slides.json'
+
+  let currentSlide = ref(0)
+  let slideTicker = false
+
+  function nextSlide () {    
+    console.log('NEXT SLIDE');
+    
+    currentSlide.value++
+
+    if (currentSlide.value > slidesData.length - 1) {
+      currentSlide.value = 0
+    }
+  }
+
+  function prevSlide () {
+    console.log('PREV SLIDE');
+    currentSlide.value--
+    
+    if (currentSlide.value < 0) {
+      currentSlide.value = slidesData.length - 1
+    }
+  }
+
+  function toggleSlide (index) {
+    console.log(`SLIDE INDEX ${index}`);
+    currentSlide.value = index
+  }
+
+  function startSlider () {
+    slideTicker = setInterval(() => {
+      nextSlide();
+    }, 5000);
+  }
+
+  function stopSlider () {
+    clearInterval(slideTicker)
+  }
+
+
+  onMounted(() => { startSlider() })
 </script>
 
 
 <template>
-  <div class="sld">
-    <img class="sld__img" src="/public/v4sources/img/4.jpg">
-    <div class="sld__cover"></div>
+  <div class="sld" @mouseenter="stopSlider" @mouseleave="startSlider">
+    <div class="sld__slides">
+      <img class="sld__img" loading="lazy"
+        v-for="(item, index) in slidesData" :key="index"
+        :class="{ 'sld__inactiveSlide': currentSlide != index }"
+        :src="item.img"
+      >
+
+      <div class="sld__cover"></div>
+    </div>
+
 
     <div class="sld__dock">
       <div class="sld__transformer sld__dockContentHolder">
@@ -18,17 +69,21 @@
       <div class="sld__transformer sld__dockControlsHolder">
         <div class="sld__dockControls">
           <div class="sld__dockArrow sld__dockBack">
-            <arrow class="sld__dockArrowIcon"></arrow>
+            <arrow class="sld__dockArrowIcon" @click="prevSlide">
+            </arrow>
           </div>
 
           <ul class="sld__dockDotList">
-            <li class="sld__dockDot"></li>
-            <li class="sld__dockDot"></li>
-            <li class="sld__dockDot"></li>
+            <li class="sld__dockDot" v-for="(item, index) in slidesData.length" 
+              :key="index" @click="toggleSlide(index)"
+              :class="{'sld__dockDot_active': currentSlide == index}"
+              >
+            </li>
           </ul>
 
           <div class="sld__dockArrow sld__dockNext">
-            <arrow class="sld__dockArrowIcon"></arrow>
+            <arrow class="sld__dockArrowIcon" @click="nextSlide">
+            </arrow>
           </div>
         </div>
       </div>
@@ -48,21 +103,38 @@
   overflow: hidden;
 }
 
+.sld__cover {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+
+.sld__slides {
+  position: relative;
+  width: 100%; height: 100%;;
+}
+
 .sld__img {
   position: absolute;
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: .5s;
 }
 
-.sld__cover {
-  position: absolute;
-  width: 100%; height: 100%;
-  background: linear-gradient(
-    100deg, 
-    white 20%,
-    rgba(0, 0, 0, 0)
-  );
+.sld__inactiveSlide {
+  opacity: 0;
+
+  transform: 
+    /* scale(1.05) */
+    translateX(10px)
+    /* translateY(50px) */
+  ;
 }
 
 
@@ -91,12 +163,13 @@
   
   padding: 0 20px;
   box-sizing: border-box;
-  flex-grow: 1;
+  flex-grow: 1;  
 }
 
 
 .sld__dockContentHolder {
   background: white;
+  margin-left: -50px;
 }
 
 
@@ -151,7 +224,15 @@
 .sld__dockDot {
   display: block;
   width: 10px; height: 10px;
-  background: white;
+  background: rgba(255, 255, 255, .5);
   border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
 }
+
+
+.sld__dockDot_active {
+  background: white;
+}
+
 </style>

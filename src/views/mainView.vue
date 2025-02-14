@@ -5,8 +5,8 @@ import { onMounted } from 'vue';
 import sideMenu from '@/components/sideMenu.vue';
 import tile from '../components/tile.vue';
 import router from '@/router';
-import videoBack from '@/components/videoBack.vue';
 import mainSlider from '@/components/mainSlider.vue';
+import extendMenu from '@/components/extendMenu.vue';
 
 
 let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
@@ -64,11 +64,8 @@ onMounted(enterAimation)
       <side-menu class="app__smenu" @goClick="goTo" />
 
       <div class="app__imgHolder">
-        <!-- <div class="app__imgCover"></div> -->
-        
-        <!-- <video-back v-if="props.isvideo" :video="props.videopath" class="app__img inviz" /> -->
-        <!-- <img v-else class="app__img inviz" :src="props.img" /> -->
         <main-slider class="app__slider" />
+        <extend-menu class="app__extMenu" />
       </div>
     </div>  
 
@@ -131,24 +128,24 @@ body {
 }
 
 
-.app__imgCover {
-  position: absolute;
-  z-index: 9;
-  top: 0; left: 0; right: 0; bottom: 0;
-
-  background: linear-gradient(
-    100deg,
-    white 10%,
-    rgba(255, 255, 255, 0) 40%
-  );
-
-
-  transition: .3s;
-}
-
-
 .app__slider {
   height: 100%;
+}
+
+.app__extMenu {
+  position: absolute;
+  top: 0px; left: 0px; bottom: 0;
+  width: 100%;
+
+  background:linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(0, 0, 0, 0) 
+  );
+  
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 
