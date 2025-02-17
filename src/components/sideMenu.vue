@@ -4,11 +4,7 @@ let title = 'Компания ЖБК-1'
 // let note = 'Созидание во имя повышения качества жизни'
 let note = 'Белгород'
 
-let links = [
-  {link: '/', text: 'Корпорация'},
-  {link: '/real', text: 'Недвижимость'},
-  {link: '/zavod', text: 'Строительные материалы'},
-]
+let props = defineProps(['menu'])
 
 </script>
 
@@ -22,10 +18,9 @@ let links = [
 
 
   <div class="smenu__linkList">
-    <div v-for="item in links" class="smenu__link"
+    <div v-for="item in menu" class="smenu__link"
       :key="item.link"
-      @click="$emit('goClick', item.link)"
-      :class="{'smenu__link_active': item.link == $route.path}"
+      @mouseenter="$emit('hoverOn', item.submenu)"
     >
       {{ item.text }}
 

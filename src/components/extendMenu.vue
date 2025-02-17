@@ -1,5 +1,5 @@
 <script setup>
- import subMenu from '/mocks/testSubMenu.json'
+  import subMenu from '/mocks/testSubMenu.json'
 </script>
 
 <template>
@@ -15,7 +15,7 @@
 
 
 .extMenu__list {
-  height: 70%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;

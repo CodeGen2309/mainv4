@@ -1,16 +1,22 @@
 <script setup>
 import { animate, stagger } from 'motion';
 import { onMounted, ref } from 'vue';
+import subMenuList from '/mocks/subMenu.json'
 
 import sideMenu from '@/components/sideMenu.vue';
 import tile from '../components/tile.vue';
 import router from '@/router';
 import mainSlider from '@/components/mainSlider.vue';
-import extendMenu from '@/components/extendMenu.vue';
 
 
 let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
-let extMenu = ref()
+
+let onSideMenu = ref()
+let onSubMenu = ref()
+let showSubMenu = ref()
+let currentSubMenu = ref()
+
+
 
 
 async function enterAimation () {
@@ -49,14 +55,58 @@ async function goTo (link) {
 }
 
 
-function showExtMenu () {
-  console.log('SHOW EXT MENU');
-  extMenu.value = true
+
+async function changeSubMenu (newMenu) {
+  if (
+    onSideMenu.value == false &&
+    onSubMenu.value == false
+  ) {
+    hideExtMenu()
+  }
+
+  currentSubMenu.value = subMenuList[newMenu]
 }
 
-function hideExtMenu () {
-  console.log('HIDE EXT MENU');
-  extMenu.value = false
+
+async function showExtMenu () {
+  let subMenuItem = document.querySelector('.app__subMenu')
+  let items = document.querySelectorAll('.subMenu__item')
+
+  let listAnim = [
+    items,
+    { opacity: [0, 1],  translateY: ['-20px', '0px'] },
+    { duration: .3, delay: stagger(0.03) }
+  ]
+
+  let containerAnim = [
+    subMenuItem, 
+    { 'opacity': [0, 1]},
+    { duration: .5}
+  ]
+
+  animate(
+    subMenuItem,
+    {'width': '100%'},
+    {duration: 0}
+  )
+
+
+  animate([containerAnim])
+  animate([listAnim])
+}
+
+async function hideExtMenu () {
+  let subMenuItem = document.querySelector('.app__subMenu')
+  let items = document.querySelector('.subMenu__item')
+
+
+  await animate(subMenuItem, { 'opacity': 0})
+
+  animate(
+    subMenuItem,
+    {'width': '0%'},
+    { duration: 0 }
+  )
 }
 
 
@@ -65,7 +115,9 @@ function print (ent) {
 }
 
 
-onMounted(enterAimation)
+onMounted(() => {
+  enterAimation()
+})
 </script>
 
 
@@ -75,14 +127,22 @@ onMounted(enterAimation)
   <section class="app">
     <div class="app__top">
       <side-menu class="app__smenu" @goClick="goTo" 
+        :menu="subMenuList.main" @hoverOn="changeSubMenu"
         @mouseenter="showExtMenu" @mouseleave="hideExtMenu"
       />
 
+      <!-- <side-menu class="app__smenu" @goClick="goTo" /> -->
+
       <div class="app__imgHolder">
         <main-slider class="app__slider" />
-        <transition name = "testAnim">
-          <extend-menu class="app__extMenu" v-show="extMenu" />
-        </transition>
+
+        <div class="app__subMenu subMenu">
+          <ul class="subMenu__list">
+            <li class="subMenu__item" v-for="(item, index) in currentSubMenu" :key="index">
+              <a :href="item.link" class="subMenu__link">{{ item.text }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>  
 
@@ -149,26 +209,76 @@ body {
   height: 100%;
 }
 
-.app__extMenu {
+
+.subMenu {
   position: absolute;
-  top: 0px; left: 0px; bottom: 0;
-  width: 100%;
+  top: 0; left: 0;
+  height: 100%; width: 10px;
+  opacity: 0;
+  
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
   overflow: hidden;
 
-  background: rgba(255, 255, 255, .9);
-  /* background:linear-gradient(
-    100deg,
+  background: rgba(255, 255, 255, .8);
+  /* background: linear-gradient(
+    110deg,
     rgba(255, 255, 255, 1) 70%,
-    rgba(0, 0, 0, 0) 
+    rgba(0, 0, 0, 0)
   ); */
-  
-  font-size: 18px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, .7);
-  letter-spacing: 1px;
-  transition: .4s;
+
+  backdrop-filter: blur(10px);
 }
 
+
+
+.subMenu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+
+
+  list-style: none;
+  letter-spacing: 1px;
+}
+
+
+.subMenu__item {
+  display: flex;
+}
+
+
+.subMenu__link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+
+  display: block;
+  margin: 10px 30px;
+  padding: 10px 0px;
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+
+.subMenu__link:after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0%; height: 1px;
+  background: rgba(0, 0, 0, .7);
+  transition: .3s;
+} 
+
+
+.subMenu__link:hover:after{
+  width: 100%;
+}
 
 
 .app__img {
@@ -185,6 +295,7 @@ body {
   display: flex;
   gap: 20px;
 }
+
 
 .app__tileItem {
   flex-grow: 1;
