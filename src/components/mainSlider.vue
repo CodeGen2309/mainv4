@@ -5,14 +5,18 @@
   import slidesData from '/mocks/slides.json'
 
   let currentSlide = ref(0)
+  let currTitle = ref(slidesData[currentSlide.value].title)
   let slideTicker = false
+
+  
 
   function nextSlide () {    
     console.log('NEXT SLIDE');
     
     currentSlide.value++
+    currTitle = ref(slidesData[currentSlide.value].title)
 
-    if (currentSlide.value > slidesData.length - 1) {
+    if (currentSlide.value >= slidesData.length - 1) {
       currentSlide.value = 0
     }
   }
@@ -20,6 +24,7 @@
   function prevSlide () {
     console.log('PREV SLIDE');
     currentSlide.value--
+    currTitle = ref(slidesData[currentSlide.value].title)
     
     if (currentSlide.value < 0) {
       currentSlide.value = slidesData.length - 1
@@ -62,7 +67,7 @@
     <div class="sld__dock">
       <div class="sld__transformer sld__dockContentHolder">
         <div class="sld__dockContent">
-          <p class="sld__dockTitle">Title</p>
+          <p class="sld__dockTitle">{{ currTitle }}</p>
         </div>
       </div>
 

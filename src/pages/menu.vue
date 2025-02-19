@@ -4,13 +4,13 @@ import { onMounted, ref } from 'vue';
 
 let pager = [
   { text: 'Корпорация', submenu: 'corp',
-    cover:'/public/v4sources/img/13.jpg'
+    cover:'/public/v4sources/img/tstm.jpg'
   },
   { text: 'Недвижимость', submenu: 'real',
-    cover:'/public/v4sources/img/1.jpg'
+    cover:'/public/v4sources/img/13.jpg'
   },
   { text: 'Завод', submenu: 'build',
-    cover:'/public/v4sources/img/16.jpg'
+    cover:'/public/v4sources/img/18.jpg'
   },
   { text: 'ЖНК', submenu: 'jnk',
     cover:'/public/v4sources/img/12.jpg'
@@ -20,97 +20,101 @@ let pager = [
 let menuList = {
   corp : [
     {
-      img: '/public/v4sources/img/1.jpg', title: 'test',
+      img: '/public/v4sources/img/corp.jpg', title: 'О компании',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/2.jpg', title: 'test',
+      img: '/public/v4sources/img/2.jpg', title: 'Структура корпорации',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/3.jpg', title: 'test',
+      img: '/public/v4sources/img/3.jpg', title: 'Новости',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/4.jpg', title: 'test',
+      img: '/public/v4sources/img/4.jpg', title: 'Акции и скидки',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/5.jpg', title: 'test',
+      img: '/public/v4sources/img/5.jpg', title: 'Галерея',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/6.jpg', title: 'test',
+      img: '/public/v4sources/img/6.jpg', title: 'Благотворительность',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/7.jpg', title: 'test',
+      img: '/public/v4sources/img/7.jpg', title: 'Вакансии',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/8.jpg', title: 'test',
+      img: '/public/v4sources/img/8.jpg', title: 'Контакты',
       style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
 
   real : [
     {
-      img: '/public/v4sources/img/2.jpg', title: 'test',
+      img: '/public/v4sources/img/2.jpg', title: 'Информация о застройщике',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/3.jpg', title: 'test',
+      img: '/public/v4sources/img/3.jpg', title: 'Объекты строительства',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/4.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/5.jpg', title: 'test',
+      img: '/public/v4sources/img/4.jpg', title: 'Прайс-лист на недвижимость',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/6.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/7.jpg', title: 'test',
+      img: '/public/v4sources/img/5.jpg', title: 'Вторичная недвижимость',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/8.jpg', title: 'test',
+      img: '/public/v4sources/img/6.jpg', title: 'Коммерческая недвижимость',
+      style: 'grid-column: span 2; grid-row: span 2;'
+    },
+    {
+      img: '/public/v4sources/img/7.jpg', title: 'Акции и скидки',
+      style: 'grid-column: span 2; grid-row: span 4;'
+    },
+    {
+      img: '/public/v4sources/img/8.jpg', title: 'О Белгородской области',
       style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
 
   build : [
-    {
-      img: '/public/v4sources/img/2.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/3.jpg', title: 'test',
+  {
+      img: '/public/v4sources/img/corp.jpg', title: 'О компании',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/4.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/5.jpg', title: 'test',
+      img: '/public/v4sources/img/2.jpg', title: 'Структура корпорации',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/6.jpg', title: 'test',
+      img: '/public/v4sources/img/3.jpg', title: 'Новости',
       style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
-      img: '/public/v4sources/img/7.jpg', title: 'test',
+      img: '/public/v4sources/img/4.jpg', title: 'Акции и скидки',
+      style: 'grid-column: span 2; grid-row: span 2;'
+    },
+    {
+      img: '/public/v4sources/img/5.jpg', title: 'Галерея',
       style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
-      img: '/public/v4sources/img/8.jpg', title: 'test',
+      img: '/public/v4sources/img/6.jpg', title: 'Благотворительность',
+      style: 'grid-column: span 2; grid-row: span 2;'
+    },
+    {
+      img: '/public/v4sources/img/7.jpg', title: 'Вакансии',
+      style: 'grid-column: span 2; grid-row: span 3;'
+    },
+    {
+      img: '/public/v4sources/img/8.jpg', title: 'Контакты',
       style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
@@ -142,7 +146,7 @@ let menuList = {
     },
     {
       img: '/public/v4sources/img/8.jpg', title: 'test',
-      style: 'grid-column: span 4; grid-row: span 2;'
+      style: 'grid-column: span 2; grid-row: span 2;'
     },
   ],
 }
@@ -171,7 +175,7 @@ async function changeSubMenu (index) {
   currentMenu.value = menuList[newMenu]
 
   setTimeout(() => {
-     animate(
+      animate(
       menuHolder,
       { opacity: [0, 1], translateX: ['30px', '0px']},
       { duration: .4, delay: stagger(0.02) }
@@ -311,6 +315,7 @@ async function changeSubMenu (index) {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: .5;
 }
 
 
@@ -323,8 +328,8 @@ async function changeSubMenu (index) {
   grid-auto-rows: 1fr;
   grid-auto-flow: dense;
 
-  margin: 0; padding: 0px 20px;
-  padding-top: 30px;
+  margin: 0; padding: 60px 150px;
+  /* padding-top: 30px; */
   gap: 40px;
 
   list-style: none; 
@@ -336,6 +341,11 @@ async function changeSubMenu (index) {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+.menup__mosaicItem:hover {
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
 }
 
 .menup__img {
@@ -375,7 +385,7 @@ async function changeSubMenu (index) {
 
 .menup__titleText {
   transform: skewX(-40deg);
-  margin: 0; padding: 0;
+  margin: 0; padding: 6px 40px;
   font-size: 21px;
   letter-spacing: 1px;
 }

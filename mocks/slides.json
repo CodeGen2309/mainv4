@@ -1,19 +1,19 @@
 [
   {
-    "img": "/public/v4sources/img/1.jpg",
-    "title": "Первый слайд",
+    "img": "/public/v4sources/img/slides/nweScool.jpg",
+    "title": "Поколение 5.0",
     "link": "link"
   },
 
   {
-    "img": "/public/v4sources/img/2.jpg",
-    "title": "Второй епта",
+    "img": "/public/v4sources/img/slides/trud.jpg",
+    "title": "1 место во Всероссийском конкурсе трудоустройства молодежи",
     "link": "link"
   },
 
   {
-    "img": "/public/v4sources/img/3.jpg",
-    "title": "И третий",
+    "img": "/public/v4sources/img/slides/dub.jpg",
+    "title": "Новая школа п. Репное",
     "link": "link"
   }
 ]
