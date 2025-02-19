@@ -22,6 +22,7 @@ let props = defineProps(['menu'])
       :key="item.link"
       @mouseenter="$emit('hoverOn', item.submenu)"
     >
+    
       {{ item.text }}
 
       <div class="smenu__linkdec"></div>
@@ -78,7 +79,7 @@ let props = defineProps(['menu'])
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 30px;
   transition: .3s;
 }
 

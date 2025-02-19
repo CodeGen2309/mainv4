@@ -4,6 +4,7 @@ import { Transition } from 'vue';
 
 import gmenu from '../../mocks/mainMenu.json'
 import menuSection from '@/components/menuSection.vue';
+import router from '@/router';
 
 let isMenuShow = ref(false)
 let isSubMenuShow = ref(false)
@@ -71,10 +72,11 @@ let HeadLinks = [
     <div class="header__inner">
       <img class="header__logo" src="/public/v4sources/icons/logo.svg">
 
-      <img class="header__menuIcon" 
-        src="/public/v4sources/icons/menu.svg"
-        @click="toggleMenu"
-      >
+      <router-link to="/menu">
+        <img class="header__menuIcon" 
+          src="/public/v4sources/icons/menu.svg"
+        >
+      </router-link>
     </div>
   </div>
 

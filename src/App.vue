@@ -9,7 +9,11 @@ import { RouterView } from 'vue-router';
 
 <template>
   <Header class="header" />
-  <router-view />
+  <transition name="testAnim">
+    <router-view v-slot="{ Component }">
+      <component class="testComp" :is="Component" />
+    </router-view>
+  </transition>
 </template>
 
 
@@ -24,5 +28,13 @@ body {
   z-index: 9;
 }
 
+.testComp {
+  transition: .3s;
+}
 
+.testAnim-enter-active, 
+.testAnim-leave-active {
+  opacity: 0;
+  transition: .3s;
+}
 </style>

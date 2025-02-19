@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createMemoryHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/zavod',
       name: 'zavod',
       component: () => import('../pages/zavod.vue'),
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: () => import('../pages/menu.vue'),
     },
   ],
 })

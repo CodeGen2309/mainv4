@@ -11,10 +11,9 @@ import mainSlider from '@/components/mainSlider.vue';
 
 let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
 
-let onSideMenu = ref()
 let onSubMenu = ref()
 let showSubMenu = ref()
-let currentSubMenu = ref()
+let currentSubMenu = ref(subMenuList['main'])
 
 
 
@@ -57,14 +56,27 @@ async function goTo (link) {
 
 
 async function changeSubMenu (newMenu) {
-  if (
-    onSideMenu.value == false &&
-    onSubMenu.value == false
-  ) {
-    hideExtMenu()
-  }
+  let subMenu, hideSub, showSub
 
+  showExtMenu()
+  subMenu = document.querySelectorAll('.subMenu__list')
+  
+  hideSub = [
+    subMenu,
+    { 'opacity': [1, 0], 'translateX': ['0px', '20px'] },
+    { duration: 0.2 }
+  ]
+
+  showSub = [
+    subMenu,
+    { 'opacity': [0, 1], 'translateX': ['-20px', '0px'] },
+    { duration: 0.2 }
+  ]
+
+
+  await animate([hideSub])
   currentSubMenu.value = subMenuList[newMenu]
+  await animate([showSub])
 }
 
 
@@ -74,13 +86,13 @@ async function showExtMenu () {
 
   let listAnim = [
     items,
-    { opacity: [0, 1],  translateY: ['-20px', '0px'] },
+    { opacity: 1 },
     { duration: .3, delay: stagger(0.03) }
   ]
 
   let containerAnim = [
     subMenuItem, 
-    { 'opacity': [0, 1]},
+    { 'opacity': 1},
     { duration: .5}
   ]
 
@@ -121,30 +133,27 @@ onMounted(() => {
 </script>
 
 
-
-
 <template>
   <section class="app">
     <div class="app__top">
+      <!-- <side-menu class="app__smenu" @goClick="goTo" /> -->
+
       <side-menu class="app__smenu" @goClick="goTo" 
         :menu="subMenuList.main" @hoverOn="changeSubMenu"
-        @mouseenter="showExtMenu" @mouseleave="hideExtMenu"
       />
-
-      <!-- <side-menu class="app__smenu" @goClick="goTo" /> -->
 
       <div class="app__imgHolder">
         <main-slider class="app__slider" />
 
         <div class="app__subMenu subMenu">
-          <ul class="subMenu__list">
-            <li class="subMenu__item" v-for="(item, index) in currentSubMenu" :key="index">
+          <ul class="subMenu__list" @mouseleave="hideExtMenu">
+            <li class="" v-for="(item, index) in currentSubMenu" :key="index">
               <a :href="item.link" class="subMenu__link">{{ item.text }}</a>
             </li>
           </ul>
         </div>
       </div>
-    </div>  
+    </div>
 
     <ul class="app__tileList">
       <li v-for="item in props.tiles" class="app__tileItem" :key="item.title">
