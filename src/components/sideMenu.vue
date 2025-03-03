@@ -22,7 +22,6 @@ let props = defineProps(['menu'])
       :key="item.link"
       @mouseenter="$emit('hoverOn', item.submenu)"
     >
-    
       {{ item.text }}
 
       <div class="smenu__linkdec"></div>

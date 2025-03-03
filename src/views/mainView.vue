@@ -1,12 +1,12 @@
 <script setup>
 import { animate, stagger } from 'motion';
-import { onMounted, ref } from 'vue';
-import subMenuList from '/mocks/subMenu.json'
+import { onMounted, ref }   from 'vue';
+import subMenuList          from '/mocks/subMenu.json'
 
-import sideMenu from '@/components/sideMenu.vue';
-import tile from '../components/tile.vue';
-import router from '@/router';
-import mainSlider from '@/components/mainSlider.vue';
+import sideMenu             from '@/components/sideMenu.vue';
+import tile                 from '../components/tile.vue';
+import router               from '@/router';
+import mainSlider           from '@/components/mainSlider.vue';
 
 
 let props = defineProps(['tiles', 'img', 'isvideo', 'videopath' ])
@@ -17,14 +17,14 @@ let currentSubMenu = ref(subMenuList['main'])
 
 
 
-
 async function enterAimation () {
   let topimg = document.querySelector('.app__img');
   let tiles = document.querySelectorAll('.app__tile');
 
   // animate(topimg, { opacity: 1, scale: 1.05, translateX: '20px' }, { duration: .8 })
 
-  animate(tiles,  
+  animate(
+    tiles,
     {  opacity: [0, 1],  translateX: ['-50px', '0px'] },
     { duration: .3, delay: stagger(0.1) }
   )
@@ -42,7 +42,6 @@ async function leaveAnim () {
 }
 
 
-
 async function goTo (link) {
   let currRoute = router.currentRoute.value.name
   let isCurrLink = link == `/${currRoute}`
@@ -52,7 +51,6 @@ async function goTo (link) {
   await leaveAnim ()
   router.push(link)
 }
-
 
 
 async function changeSubMenu (newMenu) {
@@ -107,18 +105,23 @@ async function showExtMenu () {
   animate([listAnim])
 }
 
+
 async function hideExtMenu () {
-  let subMenuItem = document.querySelector('.app__subMenu')
-  let items = document.querySelector('.subMenu__item')
+  let subMenuItem, items,
+  coverAnim, subMenuAnim
 
+  subMenuItem = document.querySelector('.app__subMenu')
+  items = document.querySelector('.subMenu__item')
 
-  await animate(subMenuItem, { 'opacity': 0})
+  coverAnim = [ subMenuItem, { 'opacity': 0} ]
 
-  animate(
-    subMenuItem,
+  subMenuAnim = [ items,
     {'width': '0%'},
     { duration: 0 }
-  )
+  ]
+
+
+  await animate([coverAnim, subMenuAnim])
 }
 
 
@@ -184,12 +187,13 @@ body {
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 5fr 2fr;
+  grid-template-rows: 6fr 3fr;
   gap: 20px;
 
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 .app__top {
   display: flex;
@@ -199,10 +203,10 @@ body {
   overflow: hidden;
 }
 
+
 .app__smenu {
   flex-shrink: 0;
 }
-
 
 
 .app__imgHolder {
@@ -248,6 +252,7 @@ body {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+
   height: 100%;
 
 

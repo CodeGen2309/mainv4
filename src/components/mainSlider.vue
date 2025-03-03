@@ -7,7 +7,6 @@
   let currentSlide = ref(0)
   let currTitle = ref(slidesData[currentSlide.value].title)
   let slideTicker = false
-
   
 
   function nextSlide () {    
@@ -22,7 +21,6 @@
   }
 
   function prevSlide () {
-    console.log('PREV SLIDE');
     currentSlide.value--
     currTitle = ref(slidesData[currentSlide.value].title)
     
@@ -31,16 +29,19 @@
     }
   }
 
+
   function toggleSlide (index) {
     console.log(`SLIDE INDEX ${index}`);
     currentSlide.value = index
   }
+
 
   function startSlider () {
     slideTicker = setInterval(() => {
       nextSlide();
     }, 5000);
   }
+
 
   function stopSlider () {
     clearInterval(slideTicker)
@@ -82,7 +83,7 @@
             <li class="sld__dockDot" v-for="(item, index) in slidesData.length" 
               :key="index" @click="toggleSlide(index)"
               :class="{'sld__dockDot_active': currentSlide == index}"
-              >
+            >
             </li>
           </ul>
 
