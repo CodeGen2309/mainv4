@@ -202,10 +202,10 @@ async function changeSubMenu (index) {
 
 <template>
   <section class="menup">
-    <div class="menup__back">
+    <!-- <div class="menup__back">
       <img class="menup__backImg" :src="currentBack">
       <div class="menup__backFilter"></div>
-    </div>
+    </div> -->
 
     <ul class="menup__pager">
       <li class="menup__pagerItem" v-for="(item, index) in pager" :key="index"
@@ -340,7 +340,7 @@ async function changeSubMenu (index) {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, .1);
+  /* box-shadow: 0 0 10px 3px rgba(0, 0, 0, .1); */
   transition: .3s;
 }
 

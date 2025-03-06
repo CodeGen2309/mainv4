@@ -5,39 +5,37 @@
   import slidesData from '/mocks/slides.json'
 
   let currentSlide = ref(0)
-  let currTitle = ref(slidesData[currentSlide.value].title)
   let slideTicker = false
   
 
   function nextSlide () {    
-    console.log('NEXT SLIDE');
-    
-    currentSlide.value++
-    currTitle = ref(slidesData[currentSlide.value].title)
+    let isLastSlide = currentSlide.value >= slidesData.length - 1
 
-    if (currentSlide.value >= slidesData.length - 1) {
-      currentSlide.value = 0
-    }
+    if (isLastSlide) { currentSlide.value = 0 } 
+    else { currentSlide.value++ }
+
+    // console.log({currentSlide: currentSlide.value, len: slidesData.length});
   }
 
+
   function prevSlide () {
-    currentSlide.value--
-    currTitle = ref(slidesData[currentSlide.value].title)
-    
-    if (currentSlide.value < 0) {
-      currentSlide.value = slidesData.length - 1
-    }
+    let isFirstSlide = currentSlide.value <= 0
+    let lastSlide = currentSlide.value = slidesData.length - 1 
+
+    if (isFirstSlide) { lastSlide }
+    else { currentSlide.value-- }
+
+    // console.log({currentSlide: currentSlide.value, len: slidesData.length});
   }
 
 
   function toggleSlide (index) {
-    console.log(`SLIDE INDEX ${index}`);
     currentSlide.value = index
   }
 
 
   function startSlider () {
-    slideTicker = setInterval(() => {
+    slideTicker =  setInterval(() => {
       nextSlide();
     }, 5000);
   }
@@ -68,7 +66,12 @@
     <div class="sld__dock">
       <div class="sld__transformer sld__dockContentHolder">
         <div class="sld__dockContent">
-          <p class="sld__dockTitle">{{ currTitle }}</p>
+          <p class="sld__dockTitle" 
+            :class="{ 'sld__dockTitle_inactive': currentSlide != index }"
+            v-for="(item, index) in slidesData" :key="index"
+          >
+            {{ item.title }}
+          </p>
         </div>
       </div>
 
@@ -135,12 +138,7 @@
 
 .sld__inactiveSlide {
   opacity: 0;
-
-  transform: 
-    /* scale(1.05) */
-    translateX(10px)
-    /* translateY(50px) */
-  ;
+  transform: translateX(10px);
 }
 
 
@@ -167,20 +165,31 @@
   transform: skewX(-30deg);
   
   
-  padding: 0 20px;
+  padding: 0 20px 0 100px;
   box-sizing: border-box;
   flex-grow: 1;  
 }
 
 
 .sld__dockContentHolder {
+  position: relative;
   background: white;
   margin-left: -50px;
+  width: 50%;
+  overflow: hidden;
 }
 
 
 .sld__dockTitle {
+  position: absolute;
   margin: 0; padding: 0;
+  opacity: 1;
+  transition: .5s;
+}
+
+.sld__dockTitle_inactive {
+  opacity: 0;
+  filter: blur(10px);
 }
 
 
@@ -190,11 +199,13 @@
   justify-content: center;
   gap: 20px;
 
-  flex-grow: 1;
   transform: skewX(-30deg);
 }
 
 .sld__dockControlsHolder {
+  display: flex;
+  justify-content: center;
+
   background: rgba(0, 0, 0, .5);
   padding: 0 20px;
   margin-right: -20px;
@@ -204,6 +215,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   color: white;
   width: 30px;

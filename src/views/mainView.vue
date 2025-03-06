@@ -17,20 +17,6 @@ let currentSubMenu = ref(subMenuList['main'])
 
 
 
-async function enterAimation () {
-  let topimg = document.querySelector('.app__img');
-  let tiles = document.querySelectorAll('.app__tile');
-
-  // animate(topimg, { opacity: 1, scale: 1.05, translateX: '20px' }, { duration: .8 })
-
-  animate(
-    tiles,
-    {  opacity: [0, 1],  translateX: ['-50px', '0px'] },
-    { duration: .3, delay: stagger(0.1) }
-  )
-}
-
-
 async function leaveAnim () {
   let topimg = document.querySelector('.app__img');
   let tiles = document.querySelectorAll('.app__tileItem');
@@ -54,27 +40,17 @@ async function goTo (link) {
 
 
 async function changeSubMenu (newMenu) {
-  let subMenu, hideSub, showSub
+  let subMenu, hideDefs, showDefs, durDefs
 
   showExtMenu()
   subMenu = document.querySelectorAll('.subMenu__list')
-  
-  hideSub = [
-    subMenu,
-    { 'opacity': [1, 0], 'translateX': ['0px', '20px'] },
-    { duration: 0.2 }
-  ]
+  hideDefs = { 'opacity': [1, 0], 'translateX': ['0px', '20px'] },
+  showDefs = { 'opacity': [0, 1], 'translateX': ['-20px', '0px'] },
+  durDefs  = { duration: 0.2 }
 
-  showSub = [
-    subMenu,
-    { 'opacity': [0, 1], 'translateX': ['-20px', '0px'] },
-    { duration: 0.2 }
-  ]
-
-
-  await animate([hideSub])
+  await animate(subMenu, hideDefs, durDefs)
   currentSubMenu.value = subMenuList[newMenu]
-  await animate([showSub])
+  await animate(subMenu, showDefs, durDefs)
 }
 
 
@@ -82,46 +58,25 @@ async function showExtMenu () {
   let subMenuItem = document.querySelector('.app__subMenu')
   let items = document.querySelectorAll('.subMenu__item')
 
-  let listAnim = [
-    items,
-    { opacity: 1 },
-    { duration: .3, delay: stagger(0.03) }
+  let animList = [
+    [ subMenuItem, {'width': '100%'}, {duration: 0} ],
+    [ subMenuItem,  { 'opacity': 1}, { duration: .5} ],
+    [ items, { opacity: 1 }, { duration: .3, delay: stagger(0.03) } ]
   ]
 
-  let containerAnim = [
-    subMenuItem, 
-    { 'opacity': 1},
-    { duration: .5}
-  ]
-
-  animate(
-    subMenuItem,
-    {'width': '100%'},
-    {duration: 0}
-  )
-
-
-  animate([containerAnim])
-  animate([listAnim])
+  animate(animList)
 }
 
 
 async function hideExtMenu () {
-  let subMenuItem, items,
-  coverAnim, subMenuAnim
+  let subMenuItem = document.querySelector('.app__subMenu')
 
-  subMenuItem = document.querySelector('.app__subMenu')
-  items = document.querySelector('.subMenu__item')
-
-  coverAnim = [ subMenuItem, { 'opacity': 0} ]
-
-  subMenuAnim = [ items,
-    {'width': '0%'},
-    { duration: 0 }
+  let animTest = [
+    [ subMenuItem, { 'opacity': 0}, { duration: .3} ],
+    [ subMenuItem,  { 'width': '0%'}, {at: '+0.1'} ]
   ]
 
-
-  await animate([coverAnim, subMenuAnim])
+  await animate(animTest)
 }
 
 
@@ -129,18 +84,12 @@ function print (ent) {
   console.log(ent);
 }
 
-
-onMounted(() => {
-  enterAimation()
-})
 </script>
 
 
 <template>
   <section class="app">
     <div class="app__top">
-      <!-- <side-menu class="app__smenu" @goClick="goTo" /> -->
-
       <side-menu class="app__smenu" @goClick="goTo" 
         :menu="subMenuList.main" @hoverOn="changeSubMenu"
       />
@@ -160,7 +109,7 @@ onMounted(() => {
 
     <ul class="app__tileList">
       <li v-for="item in props.tiles" class="app__tileItem" :key="item.title">
-        <tile :link="item.link" class="app__tile inviz" :title="item.title" :img="item.img"></tile>
+        <tile :link="item.link" class="app__tile" :title="item.title" :img="item.img"></tile>
       </li>
     </ul>
   </section>
@@ -187,7 +136,7 @@ body {
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 6fr 3fr;
+  grid-template-rows: 7fr 3fr;
   gap: 20px;
 
   padding: 20px;
@@ -328,11 +277,6 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
-.testAnim-enter-active,
-.testAnim-leave-active {
-  transform: translateX(-10%);
-  opacity: 0;
-}
 
 
 .inviz {
