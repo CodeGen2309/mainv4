@@ -21,132 +21,124 @@ let menuList = {
   corp : [
     {
       img: '/public/v4sources/img/corp.jpg', title: 'О компании',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      style: 'grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/2.jpg', title: 'Структура корпорации',
-      style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/3.jpg', title: 'Новости',
-      style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/4.jpg', title: 'Акции и скидки',
-      style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/5.jpg', title: 'Галерея',
-      style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/6.jpg', title: 'Благотворительность',
-      style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/7.jpg', title: 'Вакансии',
-      style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/8.jpg', title: 'Контакты',
-      style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
 
   real : [
     {
       img: '/public/v4sources/img/2.jpg', title: 'Информация о застройщике',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/3.jpg', title: 'Объекты строительства',
-      style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/4.jpg', title: 'Прайс-лист на недвижимость',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/5.jpg', title: 'Вторичная недвижимость',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/6.jpg', title: 'Коммерческая недвижимость',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/7.jpg', title: 'Акции и скидки',
-      style: 'grid-column: span 2; grid-row: span 4;'
+      // style: 'grid-column: span 2; grid-row: span 4;'
     },
     {
       img: '/public/v4sources/img/8.jpg', title: 'О Белгородской области',
-      style: 'grid-column: span 4; grid-row: span 2;'
+      // style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
 
   build : [
   {
       img: '/public/v4sources/img/corp.jpg', title: 'О компании',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/2.jpg', title: 'Структура корпорации',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/3.jpg', title: 'Новости',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/4.jpg', title: 'Акции и скидки',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/5.jpg', title: 'Галерея',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/6.jpg', title: 'Благотворительность',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/7.jpg', title: 'Вакансии',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/8.jpg', title: 'Контакты',
-      style: 'grid-column: span 4; grid-row: span 2;'
+      // style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
 
   jnk : [
     {
       img: '/public/v4sources/img/2.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/3.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/4.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      style: 'grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/5.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      style: 'grid-row: span 2'
     },
     {
       img: '/public/v4sources/img/6.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/7.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 3;'
+      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/8.jpg', title: 'test',
-      style: 'grid-column: span 2; grid-row: span 2;'
+      // style: 'grid-column: span 2; grid-row: span 2;'
     },
   ],
 }
@@ -202,11 +194,6 @@ async function changeSubMenu (index) {
 
 <template>
   <section class="menup">
-    <!-- <div class="menup__back">
-      <img class="menup__backImg" :src="currentBack">
-      <div class="menup__backFilter"></div>
-    </div> -->
-
     <ul class="menup__pager">
       <li class="menup__pagerItem" v-for="(item, index) in pager" :key="index"
         @click="changeSubMenu(index)"
@@ -222,6 +209,7 @@ async function changeSubMenu (index) {
       >
         <img class="menup__img" :src="item.img">
         <div class="menup__cover"></div>
+
         <div class="menup__transformer menup__title">
           <p class="menup__titleText">{{ item.title }}</p>
         </div>
@@ -234,11 +222,17 @@ async function changeSubMenu (index) {
 <style scoped>
 
 .menup {
-  padding: 70px 100px;
+  padding: 40px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
+  max-width: 1500px;
+  padding-top: 60px;
+  gap: 20px;
+
+  font-size: 16px;
 }
 
 .menup__pager {
@@ -252,9 +246,8 @@ async function changeSubMenu (index) {
   border-color:rgba(0, 0, 0, .5);
   background: rgba(255, 255, 255, .2);
 
-  margin: 20px; padding: 0;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -293,44 +286,18 @@ async function changeSubMenu (index) {
   position: absolute;
 }
 
-.menup__back {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-}
-
-.menup__backFilter {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  backdrop-filter: blur(10px);
-  background: linear-gradient(
-    120deg,
-    white 60%,
-    rgba(0, 0, 0, .2)
-  );
-}
-
-.menup__backImg {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: .5;
-}
-
-
 .menup__mosaic {
   display: grid;
   
-
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  grid-auto-flow: dense;
+  grid-auto-flow: row;
 
-  margin: 0; padding: 60px 150px;
-  /* padding-top: 30px; */
+
   gap: 40px;
+  padding: 0;
 
   list-style: none; 
   flex-grow: 1;
@@ -385,10 +352,17 @@ async function changeSubMenu (index) {
 
 .menup__titleText {
   transform: skewX(-40deg);
-  margin: 0; padding: 6px 40px;
-  font-size: 21px;
+  margin: 0; padding: 0;
+  font-size: 16px;
   letter-spacing: 1px;
 }
+
+@media (max-width: 1200px) {
+  .menup {
+    height: 1200px;
+  }
+}
+
 
 </style>
 
