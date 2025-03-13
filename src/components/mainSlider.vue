@@ -13,8 +13,6 @@
 
     if (isLastSlide) { currentSlide.value = 0 } 
     else { currentSlide.value++ }
-
-    // console.log({currentSlide: currentSlide.value, len: slidesData.length});
   }
 
 
@@ -24,8 +22,6 @@
 
     if (isFirstSlide) { lastSlide }
     else { currentSlide.value-- }
-
-    // console.log({currentSlide: currentSlide.value, len: slidesData.length});
   }
 
 
@@ -63,15 +59,16 @@
     </div>
 
 
-    <div class="sld__dock">
+    <div class="sld__dock"> 
       <div class="sld__transformer sld__dockContentHolder">
         <div class="sld__dockContent">
-          <p class="sld__dockTitle" 
-            :class="{ 'sld__dockTitle_inactive': currentSlide != index }"
-            v-for="(item, index) in slidesData" :key="index"
-          >
-            {{ item.title }}
-          </p>
+          <transition-group name = 'slideLeft'>
+            <p v-for="(item, index) in slidesData" :key="index"
+              class="sld__dockTitle"  v-show="currentSlide == index"
+            >
+              {{ item.title }}
+            </p>
+          </transition-group>
         </div>
       </div>
 
@@ -184,14 +181,8 @@
   position: absolute;
   margin: 0; padding: 0;
   opacity: 1;
-  transition: .5s;
+  transition: .4s;
 }
-
-.sld__dockTitle_inactive {
-  opacity: 0;
-  filter: blur(10px);
-}
-
 
 .sld__dockControls {
   display: flex;
@@ -253,4 +244,14 @@
   background: white;
 }
 
+
+.slideLeft-enter-active {
+  opacity: 0;
+  /* transform: translateX(40px); */
+}
+
+.slideLeft-leave-active {
+  opacity: 0;
+  transform: translateX(-40px);
+}
 </style>

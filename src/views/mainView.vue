@@ -185,12 +185,6 @@ body {
   overflow: hidden;
 
   background: rgba(255, 255, 255, .8);
-  /* background: linear-gradient(
-    110deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(0, 0, 0, 0)
-  ); */
-
   backdrop-filter: blur(10px);
 }
 
@@ -271,8 +265,6 @@ body {
 
 
 .app__tileItem:hover {
-  /* transform: translateX(4px) translateY(-4px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, .2); */
   flex-grow: 1.15;
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }

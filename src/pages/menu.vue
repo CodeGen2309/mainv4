@@ -20,7 +20,8 @@ let pager = [
 let menuList = {
   corp : [
     {
-      img: '/public/v4sources/img/corp.jpg', title: 'О компании',
+      title: 'О компании',
+      img: '/public/v4sources/img/corp.jpg', 
       style: 'grid-row: span 2;'
     },
     {
@@ -49,7 +50,7 @@ let menuList = {
   real : [
     {
       img: '/public/v4sources/img/2.jpg', title: 'Информация о застройщике',
-      // style: 'grid-column: span 2; grid-row: span 3;'
+      style: 'grid-column: span 3; grid-row: span 2;'
     },
     {
       img: '/public/v4sources/img/3.jpg', title: 'Объекты строительства',
@@ -60,18 +61,29 @@ let menuList = {
     },
     {
       img: '/public/v4sources/img/5.jpg', title: 'Вторичная недвижимость',
-      // style: 'grid-column: span 2; grid-row: span 3;'
     },
     {
       img: '/public/v4sources/img/6.jpg', title: 'Коммерческая недвижимость',
-      // style: 'grid-column: span 2; grid-row: span 2;'
+      style: 'grid-column: span 3; grid-row: span 2;',
     },
     {
       img: '/public/v4sources/img/7.jpg', title: 'Акции и скидки',
       // style: 'grid-column: span 2; grid-row: span 4;'
     },
     {
-      img: '/public/v4sources/img/8.jpg', title: 'О Белгородской области',
+      img: '/public/v4sources/img/8.jpg', title: 'Как купить',
+      // style: 'grid-column: span 4; grid-row: span 2;'
+    },
+    {
+      img: '/public/v4sources/img/8.jpg', title: 'Кредитный калькулятор',
+      // style: 'grid-column: span 4; grid-row: span 2;'
+    },
+    {
+      img: '/public/v4sources/img/8.jpg', title: 'Новости',
+      // style: 'grid-column: span 4; grid-row: span 2;'
+    },
+    {
+      img: '/public/v4sources/img/8.jpg', title: 'Контакты',
       // style: 'grid-column: span 4; grid-row: span 2;'
     },
   ],
@@ -203,18 +215,22 @@ async function changeSubMenu (index) {
       </li>
     </ul>
 
-    <ul class="menup__mosaic">
-      <li class="menup__mosaicItem menuItem" v-for="(item, index) in currentMenu" :key="index"
-        :style="item.style"
-      >
-        <img class="menup__img" :src="item.img">
-        <div class="menup__cover"></div>
+    <div class="menup__mosCover">
+      <div class="menup__mosaicHolder">
+        <ul class="menup__mosaic">
+          <li class="menup__mosaicItem menuItem" v-for="(item, index) in currentMenu" :key="index"
+            :style="item.style"
+          >
+            <img class="menup__img" :src="item.img">
+            <div class="menup__cover"></div>
 
-        <div class="menup__transformer menup__title">
-          <p class="menup__titleText">{{ item.title }}</p>
-        </div>
-      </li>
-    </ul>
+            <div class="menup__transformer menup__title">
+              <p class="menup__titleText">{{ item.title }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -286,13 +302,68 @@ async function changeSubMenu (index) {
   position: absolute;
 }
 
+
+.menup__mosCover {
+  flex-grow: 1;
+  position: relative;
+}
+
+
+.menup__mosCover::before {
+  content: '';
+  position: absolute;
+  height: 100px; width: 100%;
+  left: 0; top: 0;
+
+  /* background: #74b9ff; */
+  background: linear-gradient(
+    to bottom, 
+    rgba(255, 255, 255, 1), 
+    rgba(0, 0, 0, 0
+  ));
+
+  z-index: 2;
+}
+
+
+.menup__mosCover::after {
+  content: '';
+  position: absolute;
+  height: 80px; width: 100%;
+  left: 0; bottom: 0;
+
+  /* background: #74b9ff; */
+  background: linear-gradient(
+    to top, 
+    rgba(255, 255, 255, 1), 
+    rgba(0, 0, 0, 0
+  ));
+
+  z-index: 2;
+}
+
+
+
+.menup__mosaicHolder {
+  position: relative;
+  overflow: scroll;
+  max-height: 80vh;
+}
+
+.menup__mosaicHolder::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+}
+
+
+
 .menup__mosaic {
   display: grid;
   
   grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-columns: 3fr;
+  grid-auto-rows: minmax(200px, 1fr);
   grid-auto-flow: row;
 
 
@@ -307,7 +378,7 @@ async function changeSubMenu (index) {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  /* box-shadow: 0 0 10px 3px rgba(0, 0, 0, .1); */
+  grid-column: span 3;
   transition: .3s;
 }
 

@@ -78,7 +78,7 @@ let props = defineProps(['menu'])
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 10px;
   transition: .3s;
 }
 
