@@ -1,173 +1,26 @@
 <script setup>
 import { animate, stagger } from 'motion';
 import { onMounted, ref } from 'vue';
+import bigMenu from '/mocks/bigMenu.json'
 
-let pager = [
-  { text: 'Корпорация', submenu: 'corp',
-    cover:'/public/v4sources/img/tstm.jpg'
-  },
-  { text: 'Недвижимость', submenu: 'real',
-    cover:'/public/v4sources/img/13.jpg'
-  },
-  { text: 'Завод', submenu: 'build',
-    cover:'/public/v4sources/img/18.jpg'
-  },
-  { text: 'ЖНК', submenu: 'jnk',
-    cover:'/public/v4sources/img/12.jpg'
-  },
+let currentMenu = ref(bigMenu.jnk)
+let pager = bigMenu.mainMenu
+
+
+let menuList = [
+  bigMenu.corp,
+  bigMenu.realEstate,
+  bigMenu.shop,
+  bigMenu.jnk
 ]
 
-let menuList = {
-  corp : [
-    {
-      title: 'О компании',
-      img: '/public/v4sources/img/corp.jpg', 
-      style: 'grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/2.jpg', title: 'Структура корпорации',
-    },
-    {
-      img: '/public/v4sources/img/3.jpg', title: 'Новости',
-    },
-    {
-      img: '/public/v4sources/img/4.jpg', title: 'Акции и скидки',
-    },
-    {
-      img: '/public/v4sources/img/5.jpg', title: 'Галерея',
-    },
-    {
-      img: '/public/v4sources/img/6.jpg', title: 'Благотворительность',
-    },
-    {
-      img: '/public/v4sources/img/7.jpg', title: 'Вакансии',
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'Контакты',
-    },
-  ],
-
-  real : [
-    {
-      img: '/public/v4sources/img/2.jpg', title: 'Информация о застройщике',
-      style: 'grid-column: span 3; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/3.jpg', title: 'Объекты строительства',
-    },
-    {
-      img: '/public/v4sources/img/4.jpg', title: 'Прайс-лист на недвижимость',
-      // style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/5.jpg', title: 'Вторичная недвижимость',
-    },
-    {
-      img: '/public/v4sources/img/6.jpg', title: 'Коммерческая недвижимость',
-      style: 'grid-column: span 3; grid-row: span 2;',
-    },
-    {
-      img: '/public/v4sources/img/7.jpg', title: 'Акции и скидки',
-      // style: 'grid-column: span 2; grid-row: span 4;'
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'Как купить',
-      // style: 'grid-column: span 4; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'Кредитный калькулятор',
-      // style: 'grid-column: span 4; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'Новости',
-      // style: 'grid-column: span 4; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'Контакты',
-      // style: 'grid-column: span 4; grid-row: span 2;'
-    },
-  ],
-
-  build : [
-  {
-      img: '/public/v4sources/img/corp.jpg', title: 'О компании',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/2.jpg', title: 'Структура корпорации',
-      // style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/3.jpg', title: 'Новости',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/4.jpg', title: 'Акции и скидки',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/5.jpg', title: 'Галерея',
-      // style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/6.jpg', title: 'Благотворительность',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/7.jpg', title: 'Вакансии',
-      // style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'Контакты',
-      // style: 'grid-column: span 4; grid-row: span 2;'
-    },
-  ],
-
-  jnk : [
-    {
-      img: '/public/v4sources/img/2.jpg', title: 'test',
-      // style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/3.jpg', title: 'test',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/4.jpg', title: 'test',
-      style: 'grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/5.jpg', title: 'test',
-      style: 'grid-row: span 2'
-    },
-    {
-      img: '/public/v4sources/img/6.jpg', title: 'test',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-    {
-      img: '/public/v4sources/img/7.jpg', title: 'test',
-      // style: 'grid-column: span 2; grid-row: span 3;'
-    },
-    {
-      img: '/public/v4sources/img/8.jpg', title: 'test',
-      // style: 'grid-column: span 2; grid-row: span 2;'
-    },
-  ],
-}
-
-
-
-let currentMenu = ref(menuList.corp)
-let currentBack = ref(pager[0]['cover']) 
 
 
 
 async function changeSubMenu (index) {
   let menuHolder = document.querySelectorAll('.menup__mosaic')
   let menuCover = document.querySelectorAll('.menup__back')
-  
-  let newMenu = pager[index]['submenu']
-  let newCover = pager[index]['cover']
+  let newMenu = menuList[index]
 
 
   await animate(
@@ -176,7 +29,7 @@ async function changeSubMenu (index) {
     { duration: .4 }
   )
 
-  currentMenu.value = menuList[newMenu]
+  currentMenu.value = newMenu
 
   setTimeout(() => {
       animate(
@@ -191,16 +44,6 @@ async function changeSubMenu (index) {
     { opacity: 0 },
     { duration: .4 }
   )
-
-  currentBack.value = newCover
-
-  await animate(
-    menuCover,
-    { opacity: 1 },
-    { duration: .4 }
-  )
-
-
 }
 </script>
 
@@ -225,7 +68,7 @@ async function changeSubMenu (index) {
             <div class="menup__cover"></div>
 
             <div class="menup__transformer menup__title">
-              <p class="menup__titleText">{{ item.title }}</p>
+              <p class="menup__titleText">{{ item.text }}</p>
             </div>
           </li>
         </ul>
@@ -304,8 +147,13 @@ async function changeSubMenu (index) {
 
 
 .menup__mosCover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
+  
   position: relative;
+  max-height: 100%;
 }
 
 
@@ -329,7 +177,7 @@ async function changeSubMenu (index) {
 .menup__mosCover::after {
   content: '';
   position: absolute;
-  height: 80px; width: 100%;
+  height: 100px; width: 100%;
   left: 0; bottom: 0;
 
   /* background: #74b9ff; */
@@ -343,10 +191,11 @@ async function changeSubMenu (index) {
 }
 
 
-
 .menup__mosaicHolder {
   position: relative;
   overflow: scroll;
+  height: 100%;
+  width: 100%;
   max-height: 80vh;
 }
 
@@ -360,15 +209,17 @@ async function changeSubMenu (index) {
 .menup__mosaic {
   display: grid;
   
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 250px);
   grid-template-columns: repeat(9, 1fr);
   grid-auto-columns: 3fr;
-  grid-auto-rows: minmax(200px, 1fr);
+  grid-auto-rows: minmax(250px, 1fr);
   grid-auto-flow: row;
 
 
-  gap: 40px;
+  gap: 30px;
   padding: 0;
+  height: 100%;
+  max-height: 100%;
 
   list-style: none; 
   flex-grow: 1;
@@ -376,7 +227,7 @@ async function changeSubMenu (index) {
 
 .menup__mosaicItem {
   position: relative;
-  border-radius: 10px;
+  border-radius: 10px 10px 10px 0px;
   overflow: hidden;
   grid-column: span 3;
   transition: .3s;
@@ -398,26 +249,26 @@ async function changeSubMenu (index) {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: 
-    linear-gradient(
-      to top left,
-      rgba(0, 0, 0, .3),
-      rgba(0, 0, 0, 0)
-    )
-  ;
+
+  background: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, .4),
+    rgba(0, 0, 0, .0),
+    rgba(0, 0, 0, 0)
+  );
 
   transition: .3s;
 }
 
 .menup__transformer {
-  transform: skewX(40deg) translateX(-20px);
+  transform: skewX(40deg) translateX(-25px);
   background: white;
 }
 
 .menup__title {
   position: absolute;
   left: 0; bottom: 0;
-  margin: 0; padding: 10px 50px;
+  margin: 0; padding: 15px 50px;
   font-size: 18px;
 }
 
