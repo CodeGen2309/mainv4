@@ -3,7 +3,7 @@ import { animate, stagger } from 'motion';
 import { onMounted, ref } from 'vue';
 import bigMenu from '/mocks/bigMenu.json'
 
-let currentMenu = ref(bigMenu.jnk)
+let currentMenu = ref(bigMenu.realEstate)
 let pager = bigMenu.mainMenu
 
 
@@ -62,7 +62,7 @@ async function changeSubMenu (index) {
       <div class="menup__mosaicHolder">
         <ul class="menup__mosaic">
           <li class="menup__mosaicItem menuItem" v-for="(item, index) in currentMenu" :key="index"
-            :style="item.style"
+            :class="item.class"
           >
             <img class="menup__img" :src="item.img">
             <div class="menup__cover"></div>
@@ -90,7 +90,6 @@ async function changeSubMenu (index) {
 
   padding: 40px;
   padding-top: 60px;
-
   font-size: 16px;
 }
 
@@ -133,6 +132,7 @@ async function changeSubMenu (index) {
   width: 100%;
 }
 
+
 .menup__pagerBacklight {
   position: absolute;
   width: 0%; height: 100%;
@@ -140,6 +140,7 @@ async function changeSubMenu (index) {
   opacity: 0;
   transition: .4s;
 }
+
 
 .menup__pagerText {
   margin: 0; padding: 0;
@@ -195,7 +196,8 @@ async function changeSubMenu (index) {
 
 .menup__mosaicHolder {
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: visible;
   height: 100%;
   width: 100%;
   max-height: 80vh;
@@ -236,7 +238,29 @@ async function changeSubMenu (index) {
 
 
 .menup__mosaicItem:hover {
-  box-shadow: 10px -5px 10px 3px rgba(0, 0, 0, .3);
+  box-shadow: 10px -5px 10px 3px rgba(0, 0, 0, .1);
+}
+
+.menup__mosaicItem_big {
+  grid-column: span 6;
+  grid-row: span 2 ;
+}
+
+.menup__mosaicItem_large {
+  grid-column: span 5;
+  grid-row: span 2 ;
+}
+
+.menup__mosaicItem_wide {
+  grid-column: span 4;
+}
+
+.menup__mosaicItem_uwide {
+  grid-column: span 5;
+}
+
+.menup__mosaicItem_small {
+  grid-column: span 2;
 }
 
 
@@ -264,7 +288,7 @@ async function changeSubMenu (index) {
 }
 
 .menup__transformer {
-  transform: skewX(40deg) translateX(-25px);
+  transform: skewX(40deg) translateX(-30px);
   background: white;
 }
 

@@ -8,20 +8,17 @@
     {
       "link": "https://belbeton.ru/real-estate/",
       "text": "Недвижимость",
-      "subMenu": "realEstate",
-      "style": ""
+      "subMenu": "realEstate"
     },
     {
       "link": "https://belbeton.ru/building-materials/catalog/",
       "text": "Строительные материалы",
-      "subMenu": "shop",
-      "style": ""
+      "subMenu": "shop"
     },
     {
       "link": "https://belbeton.ru/wnc/",
       "text": "ЖНК",
-      "subMenu": "jnk",
-      "style": ""
+      "subMenu": "jnk"
     }
   ],
 
@@ -31,42 +28,42 @@
       "link": "https://belbeton.ru/corporation/",
       "text": "О корпорации",
       "img": "/v4sources/img/menuCovers/corp/about.jpg",
-      "style": "grid-column: span 4; grid-row: span 2;"
+      "class": "menup__mosaicItem_large"
     },
 
     {
       "link": "https://belbeton.ru/corporation/news/",
       "text": "Новости",
       "img":  "/v4sources/img/menuCovers/corp/news.jpg",
-      "style": "grid-column: span 5"
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "https://belbeton.ru/corporation/promotions-and-discounts/",
       "text": "Акции и скидки",
       "img":  "/v4sources/img/menuCovers/corp/akcii.webp",
-      "style": "grid-column: span 2"
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "https://belbeton.ru/corporation/gallery/",
       "text": "Галерея",
       "img":  "/v4sources/img/menuCovers/corp/galery.jpeg",
-      "style": "grid-column: span 3"
+      "class": "menup__mosaicItem_wide"
     },
 
     {
       "link": "https://belbeton.ru/corporation/social-responsibility.php",
       "text": "Благотворительность",
       "img":  "/v4sources/img/menuCovers/corp/blag.jpg",
-      "style": "grid-column: span 4"
+      "class": "menup__mosaicItem_wide"
     },
 
     {
       "link": "https://belbeton.ru/corporation/contacts/",
       "text": "Контакты",
       "img":  "/v4sources/img/menuCovers/corp/contakts.jpg",
-      "style": "grid-column: span 5"
+      "class": "menup__mosaicItem_uwide"
     }
   ],
 
@@ -76,14 +73,14 @@
       "link": "https://belbeton.ru/building-materials/catalog/",
       "text": "Интернет-магазин",
       "img":  "/v4sources/img/menuCovers/shop/shop.jpg",
-      "style": "grid-column: span 4; grid-row: span 2;"
+      "class": ""
     },
 
     {
       "link": "https://belbeton.ru/building-materials/news/",
       "text": "Новости",
       "img":  "/v4sources/img/menuCovers/shop/news.jpg",
-      "style": "grid-column: span 2"
+      "class": ""
     },
 
     {
@@ -96,21 +93,21 @@
       "link": "https://belbeton.ru/building-materials/promotions-and-discounts/",
       "text": "Акции и скидки",
       "img":  "/v4sources/img/menuCovers/shop/akcii.webp",
-      "style": "grid-column: span 5"
+      "class": ""
     },
 
     {
       "link": "https://belbeton.ru/building-materials/contacts/",
       "text": "Контакты",
       "img":  "/v4sources/img/menuCovers/shop/contakts.jpg",
-      "style": "grid-column: span 5"
+      "class": ""
     },
 
     {
       "link": "https://belbeton.ru/building-materials/gallery/",
       "text": "Галерея",
       "img":  "/v4sources/img/menuCovers/shop/galery.jpeg",
-      "style": "grid-column: span 4"
+      "class": ""
     }
   ],
 
@@ -120,63 +117,63 @@
       "link": "https://belbeton.ru/real-estate/about-the-builder/",
       "text": "Информация о застройщике",
       "img":  "/v4sources/img/menuCovers/real/about.jpg",
-      "style": "grid-row: span 2; grid-column: span 4;"
+      "class": "menup__mosaicItem_large"
     },
 
     {
       "link": "https://belbeton.ru/real-estate/construction/buildings/",
       "text": "Объекты строительства",
       "img":  "/v4sources/img/menuCovers/real/obj.jpg",
-      "style": "grid-column: span 5"
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "https://belbeton.ru/real-estate/price-list-for-property/",
       "text": "Прайс-лист",
       "img":  "/v4sources/img/menuCovers/real/price.jpg",
-      "style": "grid-column: span 2"
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "http://belcpn.ru/",
       "text": "Вторичная недвижимость",
       "img":  "/v4sources/img/menuCovers/real/vtor.jpeg",
-      "style": "grid-column: span 3"
+      "class": "menup__mosaicItem_wide"
     },
 
     {
       "link": "https://belbeton.ru/real-estate/construction/commercial-spaces/",
       "text": "Коммерческая недвижимость",
       "img":  "/v4sources/img/menuCovers/real/komm.jpg",
-      "style": "grid-column: span 3"
+      "class": ""
     },
 
     {
       "link": "https://belbeton.ru/real-estate/construction/garages/",
       "text": "Гаражи и автостоянки",
       "img":  "/v4sources/img/menuCovers/real/garages.jpg",
-      "style": "grid-column: span 3"
+      "class": "menup__mosaicItem_wide"
     },
 
     {
       "link": "https://belbeton.ru/real-estate/promotions-and-discounts/",
       "text": "Акции и скидки",
       "img":  "/v4sources/img/menuCovers/real/akcii.jpg",
-      "style": "grid-column: span 3"
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "https://belbeton.ru/real-estate/how-to-buy/",
       "text": "Как купить",
       "img":  "/v4sources/img/menuCovers/real/howtobuy.jpg",
-      "style": "grid-column: span 2"
+      "class": ""
     },
 
     {
       "link": "https://belbeton.ru/real-estate/clearance-center/",
       "text": "Центр оформления недвижимости",
       "img":  "/v4sources/img/menuCovers/real/centr.jpg",
-      "style": "grid-column: span 4"
+      "class": ""
     },
 
     {
@@ -191,25 +188,28 @@
       "link": "https://belbeton.ru/wnc/wnc-is/",
       "text": "ЖНК - это...",
       "img":  "/v4sources/img/menuCovers/jnk/jnk.jpg",
-      "style": "grid-column: span 6 "
+      "class": "menup__mosaicItem_large"
     },
 
     {
       "link": "https://belbeton.ru/wnc/real-estate/",
       "text": "Подобрать квартиру в ЖНК",
-      "img":  "/v4sources/img/menuCovers/jnk/getapart.webp"
+      "img":  "/v4sources/img/menuCovers/jnk/getapart.webp",
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "https://belbeton.ru/wnc/how-to-join/",
       "text": "Как вступить",
-      "img":  "/v4sources/img/menuCovers/jnk/howToPay.jpg"
+      "img":  "/v4sources/img/menuCovers/jnk/howToPay.jpg",
+      "class": "menup__mosaicItem_small"
     },
 
     {
       "link": "https://belbeton.ru/wnc/stock/",
       "text": "Акции",
-      "img":  "/v4sources/img/menuCovers/jnk/akcii.jpg"
+      "img":  "/v4sources/img/menuCovers/jnk/akcii.jpg",
+      "class": "menup__mosaicItem_wide"
     },
 
     {
