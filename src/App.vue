@@ -11,8 +11,8 @@ async function toggleMenu () {
 
   await animate(
     document.querySelector('.testComp'),
-    { opacity: 0, filter: 'blur(10px)', scale: 0.9 },
-    {duration: .4}
+    { opacity: 0, filter: 'blur(10px)' },
+    { duration: .3 }
   )
 
   router.push(nextRoute)
@@ -57,6 +57,6 @@ body {
 .testAnim-enter-active, 
 .testAnim-leave-active {
   opacity: 0;
-  transform: translateX(20px);
+  filter: blur(10px);
 }
 </style>
