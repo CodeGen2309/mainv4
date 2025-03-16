@@ -81,15 +81,15 @@ async function changeSubMenu (index) {
 <style scoped>
 
 .menup {
-  padding: 40px;
   margin: auto;
   display: flex;
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
   max-width: 1500px;
+
+  padding: 40px;
   padding-top: 60px;
-  gap: 20px;
 
   font-size: 16px;
 }
@@ -107,6 +107,7 @@ async function changeSubMenu (index) {
 
   letter-spacing: 2px;
   font-size: 18px;
+  padding: 0;
 }
 
 
@@ -147,13 +148,14 @@ async function changeSubMenu (index) {
 
 
 .menup__mosCover {
+  position: relative;
+  max-height: 100%;
+
+
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  
-  position: relative;
-  max-height: 100%;
+  flex-grow: 1;  
 }
 
 
@@ -197,13 +199,14 @@ async function changeSubMenu (index) {
   height: 100%;
   width: 100%;
   max-height: 80vh;
+  box-sizing: border-box;
 }
+
 
 .menup__mosaicHolder::-webkit-scrollbar {
   display: none;
   opacity: 0;
 }
-
 
 
 .menup__mosaic {
@@ -215,15 +218,13 @@ async function changeSubMenu (index) {
   grid-auto-rows: minmax(250px, 1fr);
   grid-auto-flow: row;
 
-
   gap: 30px;
-  padding: 0;
-  height: 100%;
-  max-height: 100%;
 
+  padding: 40px 0;
   list-style: none; 
   flex-grow: 1;
 }
+
 
 .menup__mosaicItem {
   position: relative;
@@ -233,9 +234,11 @@ async function changeSubMenu (index) {
   transition: .3s;
 }
 
+
 .menup__mosaicItem:hover {
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .3);
+  box-shadow: 10px -5px 10px 3px rgba(0, 0, 0, .3);
 }
+
 
 .menup__img {
   position: absolute;
@@ -268,8 +271,10 @@ async function changeSubMenu (index) {
 .menup__title {
   position: absolute;
   left: 0; bottom: 0;
+  min-width: 10%;
   margin: 0; padding: 15px 50px;
   font-size: 18px;
+  transition: .7s;
 }
 
 .menup__titleText {
@@ -279,12 +284,28 @@ async function changeSubMenu (index) {
   letter-spacing: 1px;
 }
 
+
+
 @media (max-width: 1200px) {
-  .menup {
-    height: 1200px;
+  .menup__mosaic {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-flow: dense;
+  }
+
+  .menup__mosaic_item {
+    grid-column: span 2;
   }
 }
 
 
+@media (max-width: 900px) {
+  .menup__mosaic {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menup__mosaic_item {
+    grid-column: span 3 !important;
+  }
+}
 </style>
 

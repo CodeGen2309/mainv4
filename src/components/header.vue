@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from 'vue'
-import { Transition } from 'vue';
+import { ref, Transition} from 'vue'
 
 import gmenu from '../../mocks/mainMenu.json'
 import menuSection from '@/components/menuSection.vue';
@@ -72,11 +71,11 @@ let HeadLinks = [
     <div class="header__inner">
       <img class="header__logo" src="/public/v4sources/icons/logo.svg">
 
-      <router-link to="/menu">
+      <div @click="$emit('burgerClick')">
         <img class="header__menuIcon" 
           src="/public/v4sources/icons/menu.svg"
         >
-      </router-link>
+      </div>
     </div>
   </div>
 
