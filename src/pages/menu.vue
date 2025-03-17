@@ -61,7 +61,7 @@ async function changeSubMenu (index) {
       <div class="menup__mosaicHolder">
         <ul class="menup__mosaic">
           <a class="menup__mosaicItem menuItem" v-for="(item, index) in currentMenu" :key="index"
-            :class="item.class" href="item.link"
+            :class="item.class" :href="item.link"
           >
             <img class="menup__img" :src="item.img">
             <div class="menup__cover"></div>
