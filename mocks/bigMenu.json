@@ -5,23 +5,25 @@
       "text": "Корпорация",
       "subMenu": "corp"
     },
+
     {
       "link": "https://belbeton.ru/real-estate/",
       "text": "Недвижимость",
       "subMenu": "realEstate"
     },
+
     {
       "link": "https://belbeton.ru/building-materials/catalog/",
       "text": "Строительные материалы",
       "subMenu": "shop"
     },
+
     {
       "link": "https://belbeton.ru/wnc/",
       "text": "ЖНК",
       "subMenu": "jnk"
     }
   ],
-
 
   "corp": [
     {
@@ -67,8 +69,59 @@
     }
   ],
 
-
   "shop": [
+    {
+      "text": "Интернет-магазин",
+      "link": "/building-materials/catalog/",
+      "img": "/public/v4sources/img/menuCovers/shop/shop.webp",
+      "class": "menup__mosaicItem_large"
+    },
+
+    {
+      "text": "Представительства в городах",
+      "link": "/building-materials/contacts/representatives-in-other-cities/",
+      "img": "/public/v4sources/img/menuCovers/shop/contragents.jpg",
+      "class": "menup__mosaicItem_wide"
+    },
+  
+    {
+      "text": "Галерея",
+      "link": "/building-materials/gallery/",
+      "img": "/public/v4sources/img/menuCovers/shop/galery.jpeg",
+      "class": "menup__mosaicItem_small"
+    },
+  
+    {
+      "text": "Контакты",
+      "link": "/building-materials/contacts/",
+      "img": "/public/v4sources/img/menuCovers/shop/contakts.jpg",
+      "class": "menup__mosaicItem_small"
+    },
+  
+    {
+      "text": "Акции и скидки",
+      "link": "/building-materials/promotions-and-discounts/",
+      "img": "/public/v4sources/img/menuCovers/shop/akcii.webp",
+      "class": ""
+    },
+  
+    {
+      "text": "Новости",
+      "link": "/building-materials/news/",
+      "img": "/public/v4sources/img/menuCovers/shop/news.jpg",
+      "class": ""
+    },
+  
+    {
+      "text": "Прайс-лист",
+      "link": "/building-materials/price-list/",
+      "img": "/public/v4sources/img/menuCovers/shop/pricelist.jpg",
+      "class": ""
+    }
+  ],
+  
+  
+  "oldshop": [
     {
       "link": "https://belbeton.ru/building-materials/catalog/",
       "text": "Интернет-магазин",
@@ -100,13 +153,6 @@
       "link": "https://belbeton.ru/building-materials/contacts/",
       "text": "Контакты",
       "img":  "/v4sources/img/menuCovers/shop/contakts.jpg",
-      "class": ""
-    },
-
-    {
-      "link": "https://belbeton.ru/building-materials/gallery/",
-      "text": "Галерея",
-      "img":  "/v4sources/img/menuCovers/shop/galery.jpeg",
       "class": ""
     }
   ],

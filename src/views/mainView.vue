@@ -16,7 +16,6 @@ let showSubMenu = ref()
 let currentSubMenu = ref(subMenuList['main'])
 
 
-
 async function leaveAnim () {
   let topimg = document.querySelector('.app__img');
   let tiles = document.querySelectorAll('.app__tileItem');
@@ -73,7 +72,7 @@ async function hideExtMenu () {
 
   let animTest = [
     [ subMenuItem, { 'opacity': 0}, { duration: .3} ],
-    [ subMenuItem,  { 'width': '0%'}, {at: '+0.1'} ]
+    [ subMenuItem,  { 'width': '0%'}, {at: '+0.1'}  ]
   ]
 
   await animate(animTest)
@@ -227,8 +226,8 @@ body {
   content: '';
   position: absolute;
   left: 0; bottom: 0;
-  width: 0%; height: 1px;
-  background: rgba(0, 0, 0, .7);
+  width: 0%; height: .4px;
+  background: rgba(0, 0, 0, .3);
   transition: .3s;
 } 
 
@@ -269,10 +268,42 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
-
-
 .inviz {
   opacity: 0;
+}
+
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 0;
+    height: inherit;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+
+  .app__top {
+    height: 60vh;
+    border-radius: 0;
+    margin-bottom: 60px;
+  }
+
+  .app__smenu {
+    display: none;
+  }
+
+  .app__tileList {
+    flex-direction: column;
+  }  
+
+  .app__tileItem {
+    min-height: 250px;
+    border-radius: 0px;
+  }
+
+  .app__tileItem > a {
+    border-radius: 0px;
+  }
+
 }
 
 </style>

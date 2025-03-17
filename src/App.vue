@@ -54,6 +54,7 @@ body {
   transition: .3s;
 }
 
+
 .testAnim-enter-active, 
 .testAnim-leave-active {
   opacity: 0;

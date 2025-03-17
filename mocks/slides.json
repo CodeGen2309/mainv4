@@ -1,31 +1,25 @@
 [
   {
-    "img": "/public/v4sources/img/slides/nweScool.jpg",
+    "img":   "/v4sources/img/slides/nweScool.jpg",
     "title": "Поколение 5.0",
-    "link": "link"
+    "link":  "/corporation/news/v-poselke-repnoe-belgorodskogo-rayona-kompaniya-zhbk-1-postroila-shkolu-pokolenie-5-0-/"
   },
 
   {
-    "img": "/public/v4sources/img/slides/trud.jpg",
+    "img":   "/v4sources/img/slides/trud.jpg",
     "title": "1 место во Всероссийском конкурсе трудоустройства молодежи",
-    "link": "link"
+    "link":  "/corporation/news/korporatsiya-zhbk-1-zanyala-1-mesto-vo-vserossiyskom-konkurse-luchshikh-praktik-trudoustroystva-molo/"
   },
 
   {
-    "img": "/public/v4sources/img/slides/dub.jpg",
-    "title": "Новая школа п. Репное",
-    "link": "link"
+    "img":   "/v4sources/img/slides/razum.jpg",
+    "title": "Дому Детсва 29 лет ",
+    "link":  "/corporation/news/razumenskomu-domu-detstva-uzhe-29-let/"
   },
 
   {
-    "img": "/public/v4sources/img/14.jpg",
-    "title": "TEEEEEEST",
-    "link": "link"
-  },
-
-  {
-    "img": "/public/v4sources/img/9.jpg",
-    "title": "TEEEEST 2",
-    "link": "link"
+    "img":   "/v4sources/img/slides/denstroit.jpg",
+    "title": "День строителя",
+    "link":  "/corporation/news/rabotniki-korporatsii-zhbk-1-udostoilis-nagrad-raznogo-urovnya-ko-dnyu-stroitelya/"
   }
 ]

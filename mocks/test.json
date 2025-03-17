@@ -1,14 +1,5 @@
-{
-	"main": [
-		{"text": "Корпорация", "submenu":"corp"},
-		{"text": "Строительные материалы", "submenu":"build"},
-		{"text": "Недвижимость", "submenu":"real"},
-		{"text": "ЖНК", "submenu":"jnk"}
-	],
-
-
-
-	"corp": [
+[
+	[
 		{ "link": "/corporation/about-kompan/", "text": "О компании"},
 		{ "link": "/corporation/the-structure-of-the-corporation/", "text": "Структура корпорации"},
 		{ "link": "/corporation/news/", "text": "Новости"},
@@ -19,7 +10,7 @@
 		{ "link": "/corporation/contacts/", "text": "Контакты"}
 	],
 
-	"build": [
+	[
 		{ "link": "/building-materials/catalog/", "text": "Интернет-магазин"},
 		{ "link": "/building-materials/indiv-reports", "text": "Сборные железобетонные коттеджи"},
 		{ "link": "/building-materials/news/", "text": "Новости"},
@@ -31,7 +22,7 @@
 		{ "link": "/building-materials/contacts/representatives-in-other-cities/", "text": "Представительство в других городах"}
 	],
 
-	"real": [
+	[
 		{ "link": "/real-estate/about-the-builder/", "text": "Информация о застройщике"},
 		{ "link": "/real-estate/construction/buildings/", "text": "Объекты строительства"},
 		{ "link": "/real-estate/price-list-for-property/", "text": "Прайс-лист на недвижимость"},
@@ -50,8 +41,7 @@
 		{ "link": "/real-estate/contacts/", "text": "Контакты"}
 	],
 
-
-	"jnk": [
+	[
 		{ "link": "/wnc/wnc-is/", "text": "ЖНК - это..."},
 		{ "link": "/wnc/real-estate/", "text": "Подобрать квартиру в ЖНК"},
 		{ "link": "/wnc/model-project/", "text": "Построй свой дом"},
@@ -70,4 +60,4 @@
 		{ "link": "/wnc/rekvizity-dlya-oplaty.php", "text": "Реквизиты для оплаты"},
 		{ "link": "/wnc/opros-kvorum-2018.php", "text": "Опросы пайщиков"}
 	]
-}
+]

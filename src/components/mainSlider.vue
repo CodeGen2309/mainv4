@@ -63,11 +63,12 @@
       <div class="sld__transformer sld__dockContentHolder">
         <div class="sld__dockContent">
           <transition-group name = 'slideLeft'>
-            <p v-for="(item, index) in slidesData" :key="index"
+            <a v-for="(item, index) in slidesData" :key="index"
               class="sld__dockTitle"  v-show="currentSlide == index"
+              :href="item.link"
             >
               {{ item.title }}
-            </p>
+            </a>
           </transition-group>
         </div>
       </div>
@@ -104,8 +105,6 @@
 .sld {
   display: flex;
   position: relative;
-
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -181,6 +180,9 @@
   position: absolute;
   margin: 0; padding: 0;
   opacity: 1;
+
+  text-decoration: none;
+  color: inherit;
   transition: .4s;
 }
 
@@ -254,4 +256,17 @@
   opacity: 0;
   transform: translateX(-40px);
 }
+
+
+@media (max-width: 600px) {
+  .sld__dockContentHolder {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .sld__dockControlsHolder {
+    display: none;
+  }
+}
+
 </style>

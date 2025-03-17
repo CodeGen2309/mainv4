@@ -255,10 +255,13 @@ let HeadLinks = [
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .header {
     justify-content: space-between;
-    padding: 30px;
+  }
+
+  .header__phone {
+    display: none;
   }
 
   .header__menu {

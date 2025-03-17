@@ -3,7 +3,8 @@ import { animate, stagger } from 'motion';
 import { onMounted, ref } from 'vue';
 import bigMenu from '/mocks/bigMenu.json'
 
-let currentMenu = ref(bigMenu.realEstate)
+
+let currentMenu = ref(bigMenu.shop)
 let pager = bigMenu.mainMenu
 
 
@@ -13,8 +14,6 @@ let menuList = [
   bigMenu.shop,
   bigMenu.jnk
 ]
-
-
 
 
 async function changeSubMenu (index) {
@@ -61,8 +60,8 @@ async function changeSubMenu (index) {
     <div class="menup__mosCover">
       <div class="menup__mosaicHolder">
         <ul class="menup__mosaic">
-          <li class="menup__mosaicItem menuItem" v-for="(item, index) in currentMenu" :key="index"
-            :class="item.class"
+          <a class="menup__mosaicItem menuItem" v-for="(item, index) in currentMenu" :key="index"
+            :class="item.class" href="item.link"
           >
             <img class="menup__img" :src="item.img">
             <div class="menup__cover"></div>
@@ -70,7 +69,7 @@ async function changeSubMenu (index) {
             <div class="menup__transformer menup__title">
               <p class="menup__titleText">{{ item.text }}</p>
             </div>
-          </li>
+          </a>
         </ul>
       </div>
     </div>
@@ -79,7 +78,6 @@ async function changeSubMenu (index) {
 
 
 <style scoped>
-
 .menup {
   margin: auto;
   display: flex;
@@ -104,6 +102,9 @@ async function changeSubMenu (index) {
   border-color:rgba(0, 0, 0, .5);
   background: rgba(255, 255, 255, .2);
 
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+
   letter-spacing: 2px;
   font-size: 18px;
   padding: 0;
@@ -116,6 +117,7 @@ async function changeSubMenu (index) {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  scroll-snap-align: center;
 
   padding: 30px 0px;
   cursor: pointer;
@@ -219,8 +221,10 @@ async function changeSubMenu (index) {
   grid-auto-columns: 3fr;
   grid-auto-rows: minmax(250px, 1fr);
   grid-auto-flow: row;
-
   gap: 30px;
+
+  scroll-snap-type: y mandatory;
+
 
   padding: 40px 0;
   list-style: none; 
@@ -230,9 +234,15 @@ async function changeSubMenu (index) {
 
 .menup__mosaicItem {
   position: relative;
+  display: block;
+
   border-radius: 10px 10px 10px 0px;
   overflow: hidden;
+  scroll-snap-align: center;
   grid-column: span 3;
+
+  color: inherit;
+  text-decoration: none;
   transition: .3s;
 }
 
@@ -311,24 +321,79 @@ async function changeSubMenu (index) {
 
 
 @media (max-width: 1200px) {
+  .menup {
+    padding: 10px;
+  }
+
+  .menup__pager {
+    margin: 10px;
+  }
+
+  .menup__pager::-webkit-scrollbar {
+    display: none;
+  }
+
+
   .menup__mosaic {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-flow: dense;
+    gap: 30px;
   }
 
-  .menup__mosaic_item {
+  .menup__mosaic_item ,
+  .menup__mosaicItem_big,
+  .menup__mosaicItem_uwide,
+  .menup__mosaicItem_small {
     grid-column: span 2;
+  }
+
+
+  .menup__mosaicItem_large {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+
+  .menup__mosaicItem_wide {
+    grid-column: span 3;
   }
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
+  .menup {
+    padding: 0;
+  }
+
+  .menup__pager {
+    overflow: scroll;
+    margin-top: 100px;
+    padding: 40px 0;
+    box-sizing: border-box;
+
+
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .menup__pagerItem {
+    padding: 20px 0px;
+  }
+
+
   .menup__mosaic {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .menup__mosaic_item {
-    grid-column: span 3 !important;
+  .menup__mosaicItem ,
+  .menup__mosaicItem_big,
+  .menup__mosaicItem_large,
+  .menup__mosaicItem_wide,
+  .menup__mosaicItem_uwide,
+  .menup__mosaicItem_small {
+    border-radius: 0px;
+    grid-column: span 3;
+    grid-row: span 1;
   }
 }
 </style>
