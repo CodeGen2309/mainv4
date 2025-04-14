@@ -41,12 +41,14 @@ function print (ent) {
 
 <style>
 body {
-  position: relative;
-  margin: 0; padding: 0;
+  margin: 0; padding: 20px;
 }
 
 
 .header {
+  position: absolute;
+  top: 0;
+  width: 50px;
   z-index: 9;
 }
 
