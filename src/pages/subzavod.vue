@@ -124,9 +124,10 @@ let section = [
   align-items: center;
 
   position: relative;
-  width: 100%; height: 700px;
+  width: 100%; height: 750px;
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .bgs__image {
@@ -217,6 +218,11 @@ let section = [
 
 .tst_card {
   width: 100%; height: 100%;
+  transition: .3s;
+}
+
+.tst_card:hover {
+  transform: scale(1.05);
 }
 
 .tst__card_big {
@@ -261,7 +267,16 @@ let section = [
 .full__catalog {
   border-bottom: 1px solid rgba(0, 0, 0, .4);
   padding: 40px 0 14px 10px;
+  padding-left: 20px;
   font-family: 'Montserrat';
+  transition: .3s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.full__catalog:hover {
+  width: 120%;
+  padding-left: 40px;
 }
 
 .sz__banner {

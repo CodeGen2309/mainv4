@@ -162,7 +162,45 @@ onMounted(() => {
       <div class="nekr__button">Подробнее</div>
     </div>
   </div>
+
+
+  <div class="supreal__nekr nekr">
+    <div class="nekr__images" @mouseleave="clearImg">
+      <img class="nekr__img" src="/public/v4sources/img/subreal/3.jpg"
+        style="margin-bottom: 200px;"
+        @mouseenter="showImg"
+      >
+      <img class="nekr__img" src="/public/v4sources/img/subreal/4.jpg"
+        @mouseenter="showImg"
+      >
+      <img class="nekr__img nekr__img_last" src="/public/v4sources/img/subreal/5.jpg"
+        style="margin-bottom: 400px"
+        @mouseenter="showImg"
+      >
+    </div>
+
+    <div class="nekr__content">
+      <h2 class="nekr__title">На Некрасова</h2>
+
+      <p class="nekr__desc">
+        ЖК «На Некрасова» спроектирован как перспективный, 
+        современный, комфортный жилой комплекс. Он находится в 
+        северной части Белгорода. Построены и введены в 
+        эксплуатацию три многоквартирных дома: два 
+        девятиэтажных и один двенадцатиэтажный и подземный 
+        паркинг.
+        Внешний дизайн домов радует глаз: выполненные в едином 
+        стиле, яркие, позитивные дома микрорайона поднимают 
+        настроение. Все дома построены из качественных 
+        материалов, производства ЖБК-1.
+      </p>
+
+      <div class="nekr__button">Подробнее</div>
+    </div>
+  </div>
+
   
+
 </section>
 </template>
 
@@ -238,6 +276,7 @@ onMounted(() => {
   border-radius: 10px;
   transition: .3s;
   z-index: 7;
+
 }
 
 .nekr__img_last { margin-right: -400px }

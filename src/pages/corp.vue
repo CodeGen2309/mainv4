@@ -9,7 +9,7 @@ let myTiles = [
   {
     title: 'Строительные материалы', 
     img: `${currpath}/v4sources/img/tiles/corp/akcii.jpg`,
-    link: 'https://belbeton.ru/building-materials/catalog/',
+    link: '/subzavod',
   },
   {
     title: 'Купить квартиру', 
