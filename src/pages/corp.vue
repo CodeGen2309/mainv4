@@ -17,9 +17,9 @@ let myTiles = [
     link: 'https://belbeton.ru/real-estate/',
   },
   {
-    title: 'Коммерческая недвижимость', 
+    title: 'Обьекты затсройки', 
     img: `${currpath}/v4sources/img/tiles/corp/kommnew.jpg`,
-    link: 'https://belbeton.ru/real-estate/construction/commercial-spaces/',
+    link: '/subreal',
   },
 ]
 

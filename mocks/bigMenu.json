@@ -72,49 +72,49 @@
   "shop": [
     {
       "text": "Интернет-магазин",
-      "link": "/building-materials/catalog/",
+      "link": "https://belbeton.ru/building-materials/catalog/",
       "img": "/v4sources/img/menuCovers/shop/shop.webp",
       "class": "menup__mosaicItem_large"
     },
 
     {
       "text": "Представительства в городах",
-      "link": "/building-materials/contacts/representatives-in-other-cities/",
+      "link": "https://belbeton.ru/building-materials/contacts/representatives-in-other-cities/",
       "img": "/v4sources/img/menuCovers/shop/contragents.jpg",
       "class": "menup__mosaicItem_wide"
     },
   
     {
       "text": "Галерея",
-      "link": "/building-materials/gallery/",
+      "link": "https://belbeton.ru/building-materials/gallery/",
       "img": "/v4sources/img/menuCovers/shop/galery.jpeg",
       "class": "menup__mosaicItem_small"
     },
   
     {
       "text": "Контакты",
-      "link": "/building-materials/contacts/",
+      "link": "https://belbeton.ru/building-materials/contacts/",
       "img": "/v4sources/img/menuCovers/shop/contakts.jpg",
       "class": "menup__mosaicItem_small"
     },
   
     {
       "text": "Акции и скидки",
-      "link": "/building-materials/promotions-and-discounts/",
+      "link": "https://belbeton.ru/building-materials/promotions-and-discounts/",
       "img": "/v4sources/img/menuCovers/shop/akcii.webp",
       "class": ""
     },
   
     {
       "text": "Новости",
-      "link": "/building-materials/news/",
+      "link": "https://belbeton.ru/building-materials/news/",
       "img": "/v4sources/img/menuCovers/shop/news.jpg",
       "class": ""
     },
   
     {
       "text": "Прайс-лист",
-      "link": "/building-materials/price-list/",
+      "link": "https://belbeton.ru/building-materials/price-list/",
       "img": "/v4sources/img/menuCovers/shop/pricelist.jpg",
       "class": ""
     }

@@ -6,7 +6,7 @@ let props = defineProps(['title', 'img', 'link'])
 
 
 <template>
-  <a class="tile" :href="link">
+  <a class="tile" :href="props.link">
     <img class="tile__img" :src="props.img">
     <div class="tile__textHolder">
       <p class="tile__text">{{ props.title }}</p>

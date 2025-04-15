@@ -69,7 +69,9 @@ let HeadLinks = [
 <header class="header">
   <div class="header__main">
     <div class="header__inner">
-      <img class="header__logo" src="/public/v4sources/icons/logo.svg">
+      <RouterLink to="/">
+        <img class="header__logo" src="/public/v4sources/icons/logo.svg">
+      </RouterLink>
 
       <div @click="$emit('burgerClick')">
         <img class="header__menuIcon" 
