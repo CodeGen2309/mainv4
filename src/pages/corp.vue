@@ -9,17 +9,18 @@ let myTiles = [
   {
     title: 'Строительные материалы', 
     img: `${currpath}/v4sources/img/tiles/corp/akcii.jpg`,
-    link: '/subzavod',
+    link: 'https://belbeton.ru/building-materials/catalog/',
   },
   {
     title: 'Купить квартиру', 
     img: `${currpath}/v4sources/img/tiles/corp/nedvnew.jpg`,
-    link: 'https://belbeton.ru/real-estate/',
+    route: 'subreal',
+
   },
   {
-    title: 'Обьекты затсройки', 
+    title: 'Коммерческая недвижимость', 
     img: `${currpath}/v4sources/img/tiles/corp/kommnew.jpg`,
-    link: '/subreal',
+    link: 'https://belbeton.ru/real-estate/construction/commercial-spaces/',
   },
 ]
 

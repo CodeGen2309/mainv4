@@ -47,8 +47,7 @@ body {
 
 .header {
   position: absolute;
-  top: 0;
-  width: 50px;
+  top: 0; right: 0;
   z-index: 9;
 }
 

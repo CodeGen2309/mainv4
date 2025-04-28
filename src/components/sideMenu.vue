@@ -1,8 +1,8 @@
 <script setup>
-let title = 'Компания ЖБК-1'
-// let title = 'Группа компаний ЖБК - 1'
-// let note = 'Созидание во имя повышения качества жизни'
-let note = 'Белгород'
+// let title = 'Компания ЖБК-1'
+let title = 'Группа компаний ЖБК - 1'
+let note = 'Созидание во имя повышения качества жизни'
+// let note = 'Белгород'
 
 let props = defineProps(['menu'])
 
@@ -68,7 +68,7 @@ let props = defineProps(['menu'])
 .smenu__subtitle {
   margin: 0; padding: 10px 0;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 2px;
   font-family: 'montserrat';
 }

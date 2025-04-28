@@ -108,7 +108,7 @@ function print (ent) {
 
     <ul class="app__tileList">
       <li v-for="item in props.tiles" class="app__tileItem" :key="item.title">
-        <tile :link="item.link" class="app__tile" :title="item.title" :img="item.img"></tile>
+        <tile :link="item.link" class="app__tile" :title="item.title" :img="item.img" :route="item.route"></tile>
       </li>
     </ul>
   </section>
@@ -131,14 +131,13 @@ body {
   position: absolute;
   overflow: hidden;
 
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
 
   display: grid;
   grid-template-rows: 7fr 3fr;
   gap: 20px;
 
-  padding: 20px;
   box-sizing: border-box;
 }
 

@@ -64,7 +64,6 @@ let HeadLinks = [
 </script>
 
 
-
 <template>
 <header class="header">
   <div class="header__main">

@@ -12,28 +12,42 @@ let gradient = `
   );
 `
 
-let title = 'Микрорайон «Новый-2»'
+let title = 'ЖК "На Нексрасова"'
 
 let desc = `
-  Ещё на стадии проектирования микрорайон «Новый-2» стал призером всероссийского конкурса 
-  по реализации приоритетного национального проекта 
-  «Доступное и комфортное жилье – гражданам России». <br><br>
+  перспективный, современный, комфортный жилой комплекс. 
+  Он находится в северной части Белгорода. Здесь построены и 
+  введены в эксплуатацию три многоквартирных дома:  девятиэтажный, 
+  двенадцатиэтажный и пятнадцатиэтажный, и подземный паркинг.
 
-  Микрорайон «Новый-2» располагается на границе с лесом в престижном районе Харьковской горы. 
-  Он обрамлен ожерельем лесов хвойных и лиственных пород. 
+  <br><br>
+
+  Внешний дизайн домов радует глаз: выполненные в едином 
+  стиле, яркие, позитивные дома микрорайона поднимают настроение. 
+  Все дома построены из качественных материалов, производства ЖБК-1.
 `
 
 let links = [
   {text: 'Подробнее', link: 'https://belbeton.ru/real-estate/price-list-for-property/'},
-  {text: 'Купить квартиру', link: 'https://belbeton.ru/real-estate/construction/buildings/g_belgorod_mkr_novyy_2/'}
+  {text: 'Купить квартиру', link: 'https://belbeton.ru/real-estate/construction/buildings/zhk_na_nekrasova/'}
 ]
 
 let tiles = [
-  {"title": "На Некрасова", "img": "/public/v4sources/img/subreal/objects/nekras.jpg", "link": "https://belbeton.ru/real-estate/construction/buildings/zhk_na_nekrasova/"},
-  {"title": "Северная звезда", "img": "/public/v4sources/img/subreal/objects/sever.jpg", "link": ""},
-  {"title": "Новый 2", "img": "/public/v4sources/img/subreal/objects/new2.jpg", "link": ""},
-  {"title": "Новые сады", "img": "/public/v4sources/img/subreal/objects/newgardens.jpg", "link": ""},
-  {"title": "Новая Заря", "img": "/public/v4sources/img/subreal/objects/newsun.jpg", "link": ""},
+  {"title": "На Некрасова", "img": "/v4sources/img/subreal/objects/nekras.jpg", 
+    "link": "https://belbeton.ru/real-estate/construction/buildings/zhk_na_nekrasova/"
+  },
+  {"title": "Северная звезда", "img": "/v4sources/img/subreal/objects/sever.jpg", 
+    "link": "https://belbeton.ru/real-estate/construction/buildings/zhk_severnaya_zvezda/"
+  },
+  {"title": "Новый 2", "img": "/v4sources/img/subreal/objects/new2.jpg", 
+    "link": "https://belbeton.ru/real-estate/construction/buildings/g_belgorod_mkr_novyy_2/"
+  },
+  {"title": "Новые сады", "img": "/v4sources/img/subreal/objects/newgardens.jpg", 
+    "link": "https://belbeton.ru/real-estate/construction/buildings/kottedzhnyy_poselok_novye_sady/"
+  },
+  {"title": "Новая Заря", "img": "/v4sources/img/subreal/objects/newsun.jpg", 
+    "link": "https://belbeton.ru/real-estate/construction/buildings/p_razumnoe_zhk_novaya_zarya/"
+  },
 ]
 
 
@@ -83,7 +97,7 @@ onMounted(() => {
   <slideBack class="subreal__slide"
     :frontColor="gradient"
     backColor="rgba(104, 109, 224, .5)"
-    img="/public/v4sources/img/subreal/6.jpg"
+    img="/v4sources/img/subreal/nekras.jpg"
     :title :desc :links
   />
 
@@ -98,13 +112,13 @@ onMounted(() => {
 
   <div class="supreal__nekr nekr">
     <div class="nekr__images" @mouseleave="clearImg">
-      <img class="nekr__img" src="/public/v4sources/img/subreal/3.jpg"
+      <img class="nekr__img" src="/v4sources/img/subreal/3.jpg"
         @mouseenter="showImg"
       >
-      <img class="nekr__img nekr__img_top" src="/public/v4sources/img/subreal/4.jpg"
+      <img class="nekr__img nekr__img_top" src="/v4sources/img/subreal/nerasdop.jpg"
         @mouseenter="showImg"
       >
-      <img class="nekr__img nekr__img_last nekr__img_bot" src="/public/v4sources/img/subreal/5.jpg"
+      <img class="nekr__img nekr__img_last nekr__img_bot" src="/v4sources/img/subreal/5.jpg"
         @mouseenter="showImg"
       >
     </div>
@@ -113,7 +127,7 @@ onMounted(() => {
       <h2 class="nekr__title">На Некрасова</h2>
 
       <p class="nekr__desc">
-        ЖК «На Некрасова» спроектирован как перспективный, 
+        ЖК «На Некрасова» построен как перспективный, 
         современный, комфортный жилой комплекс. Он находится в 
         северной части Белгорода. Построены и введены в 
         эксплуатацию три многоквартирных дома: два 
@@ -132,15 +146,17 @@ onMounted(() => {
 
   <div class="supreal__nekr nekr">
     <div class="nekr__images" @mouseleave="clearImg">
-      <img class="nekr__img" src="/public/v4sources/img/subreal/new2/2.jpg"
+      <img class="nekr__img nekr__img_last" src="/v4sources/img/subreal/new2/4.jpg"
+        style="margin-bottom: 100px; margin-left: -120px;"
         @mouseenter="showImg"
       >
-      <img class="nekr__img" src="/public/v4sources/img/subreal/new2/3.jpg"
+
+      <img class="nekr__img" src="/v4sources/img/subreal/new2/3.jpg"
         style="margin-top: 200px;"
         @mouseenter="showImg"
-      >
-      <img class="nekr__img nekr__img_last" src="/public/v4sources/img/subreal/new2/4.jpg"
-        style="margin-bottom: 100px;"
+      >      
+
+      <img class="nekr__img" src="/v4sources/img/subreal/new2/2.jpg"
         @mouseenter="showImg"
       >
     </div>
@@ -166,33 +182,40 @@ onMounted(() => {
 
   <div class="supreal__nekr nekr">
     <div class="nekr__images" @mouseleave="clearImg">
-      <img class="nekr__img" src="/public/v4sources/img/subreal/3.jpg"
-        style="margin-bottom: 200px;"
+      <img class="nekr__img" src="/v4sources/img/subreal/severs/1.jpg"
+        style="margin-top: 40px;"
         @mouseenter="showImg"
       >
-      <img class="nekr__img" src="/public/v4sources/img/subreal/4.jpg"
+      <img class="nekr__img" src="/v4sources/img/subreal/severs/2.jpg"
+        style="margin-bottom: -300px"
         @mouseenter="showImg"
       >
-      <img class="nekr__img nekr__img_last" src="/public/v4sources/img/subreal/5.jpg"
-        style="margin-bottom: 400px"
+      <img class="nekr__img nekr__img_last" src="/v4sources/img/subreal/severs/3.jpg"
+        style="margin-bottom: -100px"
         @mouseenter="showImg"
       >
     </div>
 
     <div class="nekr__content">
-      <h2 class="nekr__title">На Некрасова</h2>
+      <h2 class="nekr__title">Северная звезда</h2>
 
       <p class="nekr__desc">
-        ЖК «На Некрасова» спроектирован как перспективный, 
-        современный, комфортный жилой комплекс. Он находится в 
-        северной части Белгорода. Построены и введены в 
-        эксплуатацию три многоквартирных дома: два 
-        девятиэтажных и один двенадцатиэтажный и подземный 
-        паркинг.
-        Внешний дизайн домов радует глаз: выполненные в едином 
-        стиле, яркие, позитивные дома микрорайона поднимают 
-        настроение. Все дома построены из качественных 
-        материалов, производства ЖБК-1.
+        Территория ЖК «Северная звезда» призвана стать пространством для обучения, 
+        взаимодействия, здоровья, работы и спорта
+
+        <br><br>
+
+        Здесь будут учебные заведения, физкультурно-оздоровительные 
+        центры и медицинские сервисы, развивающие центры, 
+        зоны для мастер-классов, студии и многое другое.
+
+        <br><br>
+
+        Проект разбивает стереотип о «спальном районе», 
+        так как в нем сочетаются функциональности 
+        городской среды и жизни за городом на природе. Местом 
+        притяжения станет центральный бульвар, 
+        где будут реализованы различные сценарии для отдыха жителей ЖК «Северная звезда».
       </p>
 
       <div class="nekr__button">Подробнее</div>
@@ -218,6 +241,7 @@ onMounted(() => {
   border-radius: 10px;
   box-sizing: border-box;
   margin-bottom: 60px;
+  height: 80%;
 }
 
 
@@ -231,7 +255,7 @@ onMounted(() => {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-auto-flow: dense;
-  gap: 20px;
+  gap: 30px;
 }
 
 .subreal__tile{
@@ -257,7 +281,7 @@ onMounted(() => {
 
   position: relative;
   padding: 170px 0;
-  margin: 100px auto;
+  margin: 80px auto;
 }
 
 .nekr__images {
@@ -272,7 +296,7 @@ onMounted(() => {
   object-fit: cover;
   object-position: center;
   margin-right: -400px;
-  border: 3px solid white;
+  border: 4px solid white;
   border-radius: 10px;
   transition: .3s;
   z-index: 7;
@@ -301,8 +325,10 @@ onMounted(() => {
   bottom: 0; left: 200px;
 
   color: white;
+  /* border: 5px solid white; */
   padding: 40px 60px;
   width: 500px;
+  border-radius: 20px;
 
   background: linear-gradient(
     70deg,

@@ -1,17 +1,24 @@
 <script setup>
-let props = defineProps(['title', 'img', 'link'])
+let props = defineProps(['title', 'img', 'link', 'route'])
 
 
 </script>
 
 
 <template>
-  <a class="tile" :href="props.link">
+  <a v-if="props.link" class="tile" :href="props.link">
     <img class="tile__img" :src="props.img">
     <div class="tile__textHolder">
       <p class="tile__text">{{ props.title }}</p>
     </div>
   </a>
+
+  <RouterLink v-else class="tile" :to="props.route">
+    <img class="tile__img" :src="props.img">
+    <div class="tile__textHolder">
+      <p class="tile__text">{{ props.title }}</p>
+    </div>
+  </RouterLink>
 </template>
 
 
