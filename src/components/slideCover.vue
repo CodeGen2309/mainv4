@@ -199,7 +199,7 @@ onMounted(() => {
 }
 
 .vCont__desc {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0; padding: 0;
   font-weight: 400;
   letter-spacing: 2px;
