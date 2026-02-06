@@ -1,6 +1,5 @@
 {
 	"main": [
-		{"text": "УК ЖБК - 1", "submenu":"corp"},
 		{"text": "Строительные материалы", "submenu":"build"},
 		{"text": "Недвижимость", "submenu":"real"},
 		{"text": "ЖНК", "submenu":"jnk"}

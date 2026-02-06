@@ -83,6 +83,11 @@ function print (ent) {
   console.log(ent);
 }
 
+
+onMounted(() => {
+  console.log(props.tiles);
+  
+})
 </script>
 
 
