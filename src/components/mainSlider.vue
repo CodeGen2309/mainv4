@@ -128,7 +128,7 @@
   position: absolute;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top left;
   transition: .5s;
 }
 

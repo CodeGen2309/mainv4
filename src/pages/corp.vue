@@ -1,5 +1,5 @@
 <script setup>
-import mainview from '../views/mainView.vue'
+import mainview from '@/views/mainView.vue'
 
 let devpath = '/public'
 let prodpath = '.'

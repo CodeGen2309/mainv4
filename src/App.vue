@@ -18,6 +18,12 @@ async function toggleMenu () {
   router.push(nextRoute)
 }
 
+
+function print (ent) {
+  console.log(ent);
+}
+
+
 </script>
 
 <template>
@@ -34,23 +40,25 @@ async function toggleMenu () {
 
 
 <style>
-  body {
-    margin: 0; padding: 20px;
-  }
+body {
+  margin: 0; padding: 20px;
+}
 
-  .header {
-    position: absolute;
-    top: 0; right: 0;
-    z-index: 9;
-  }
 
-  .testComp {
-    transition: .3s;
-  }
+.header {
+  position: absolute;
+  top: 0; right: 0;
+  z-index: 9;
+}
 
-  .testAnim-enter-active, 
-  .testAnim-leave-active {
-    opacity: 0;
-    filter: blur(10px);
-  }
+.testComp {
+  transition: .3s;
+}
+
+
+.testAnim-enter-active, 
+.testAnim-leave-active {
+  opacity: 0;
+  filter: blur(10px);
+}
 </style>

@@ -83,11 +83,6 @@ function print (ent) {
   console.log(ent);
 }
 
-
-onMounted(() => {
-  console.log(props.tiles);
-  
-})
 </script>
 
 
@@ -111,11 +106,11 @@ onMounted(() => {
       </div>
     </div>
 
-    <ul class="app__tileList">
-      <li v-for="item in props.tiles" class="app__tileItem" :key="item.title">
-        <tile :link="item.link" class="app__tile" :title="item.title" :img="item.img" :route="item.route"></tile>
-      </li>
-    </ul>
+    <div class="app__tileList">
+      <tile class="app__tile" v-for="item, idx in tiles" :key="idx" 
+        :title="item.title" :img="item.img" :link="item.link", :route="item.route"
+      />
+    </div>
   </section>
 </template>
 

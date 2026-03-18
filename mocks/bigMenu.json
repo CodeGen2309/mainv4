@@ -1,12 +1,6 @@
 {
   "mainMenu": [
     {
-      "link": "https://belbeton.ru/corporation/",
-      "text": "Корпорация",
-      "subMenu": "corp"
-    },
-
-    {
       "link": "https://belbeton.ru/real-estate/",
       "text": "Недвижимость",
       "subMenu": "realEstate"
@@ -178,13 +172,6 @@
       "text": "Прайс-лист",
       "img":  "/v4sources/img/menuCovers/real/price.jpg",
       "class": "menup__mosaicItem_small"
-    },
-
-    {
-      "link": "http://belcpn.ru/",
-      "text": "Вторичная недвижимость",
-      "img":  "/v4sources/img/menuCovers/real/vtor.jpeg",
-      "class": "menup__mosaicItem_wide"
     },
 
     {

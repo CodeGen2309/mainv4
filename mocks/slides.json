@@ -6,14 +6,32 @@
   },
 
   {
-    "img":   "/v4sources/img/slides/trud.jpg",
-    "title": "1 место во Всероссийском конкурсе трудоустройства молодежи",
-    "link":  "/corporation/news/korporatsiya-zhbk-1-zanyala-1-mesto-vo-vserossiyskom-konkurse-luchshikh-praktik-trudoustroystva-molo/"
+    "img":   "/v4sources/img/slides/gold100.jpg",
+    "title": "100 лучших товаров России",
+    "link":  "/corporation/news/produktsiya-zavoda-zhbk-1-vnov-voshla-v-spisok-100-luchshikh-tovarov-rossiidgfd/"
   },
 
   {
-    "img":   "/v4sources/img/slides/denstroit.jpg",
-    "title": "День строителя",
+    "img":   "/v4sources/img/slides/domDetstva.jpg",
+    "title": "Нашему Дому детства — 30 лет!",
     "link":  "/corporation/news/rabotniki-korporatsii-zhbk-1-udostoilis-nagrad-raznogo-urovnya-ko-dnyu-stroitelya/"
+  },
+
+  {
+    "img":   "/upload/iblock/323/pf08zbvjn5aaexd7sttfw5s9k4qe3wgs.jpg",
+    "title": "Квартиры 'под ключ' в ЖК «Новая Заря» от ЖБК-1 готовы к заселению!",
+    "link":  "/real-estate/news/169411/"
+  },
+
+  {
+    "img":   "/upload/iblock/0a3/ltxd8x84i1w0uknfd5j9ijclet2uxs3v.jpg",
+    "title": "День работника ЖКХ",
+    "link":  "/wnc/press-about-us/spetsialisty-upravlyayushchikh-kompaniy-zhbk-1-poluchili-nagrady-v-chest-professionalnogo-prazdnika-/?bitrix_include_areas=N&clear_cache=Y"
+  },
+
+  {
+    "img":  "/upload/iblock/c28/1r6rxe64uizv8zc40nmzyim3iarjd7xy.jpg",
+    "title": "ЖК СЕВЕРНАЯ ЗВЕЗДА стал лучшим в Белгородской области",
+    "link":   "/real-estate/news/169403/"
   }
 ]
