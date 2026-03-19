@@ -14,7 +14,7 @@ let myTiles = [
   {
     title: 'Купить квартиру', 
     img: `${currpath}/v4sources/img/tiles/corp/nedvnew.jpg`,
-    route: 'subreal',
+    link: 'subreal',
 
   },
   {

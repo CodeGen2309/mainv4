@@ -1,9 +1,8 @@
 <script setup>
-import { ref, Transition} from 'vue'
+import { ref, Transition } from 'vue'
 
 import gmenu from '../../mocks/mainMenu.json'
 import menuSection from '@/components/menuSection.vue';
-import router from '@/router';
 
 let isMenuShow = ref(false)
 let isSubMenuShow = ref(false)

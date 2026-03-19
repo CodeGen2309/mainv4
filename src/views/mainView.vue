@@ -1,6 +1,6 @@
 <script setup>
 import { animate, stagger } from 'motion';
-import { onMounted, ref }   from 'vue';
+import { ref } from 'vue';
 import subMenuList          from '/mocks/subMenu.json'
 
 import sideMenu             from '@/components/sideMenu.vue';
@@ -107,8 +107,9 @@ function print (ent) {
     </div>
 
     <div class="app__tileList">
+      <!-- TODO: пробросить в тайлы внешщие ссылки -->
       <tile class="app__tile" v-for="item, idx in tiles" :key="idx" 
-        :title="item.title" :img="item.img" :link="item.link", :route="item.route"
+        :title="item.title" :img="item.img" :route="item.link"
       />
     </div>
   </section>
