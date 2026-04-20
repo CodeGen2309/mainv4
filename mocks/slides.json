@@ -1,49 +1,65 @@
 [
   {
-    "img":   "/upload/iblock/cd4/j0xr0stpjvm0hp0m91hpc2wbm07g8l6n.jpg",
-    "title": "21 марта ЖБК-1 приглашает на День открытых дверей",
-    "link":  "/real-estate/news/169412/"
+    "ID": "169463",
+    "NAME": "Квартиры в новом ЖК «Наследие» от ЖБК-1",
+    "DETAIL_PICTURE": "245674",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/169413\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903236",
+    "SORT": "100",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/11d\/vzovi9uurnvhfaei3u8289ltcdbb108e.png"
   },
-
   {
-    "img":   "/upload/iblock/3c4/q52eianvteiqnzvwejvjm3hcu4jrg1rd.png",
-    "title": "Квартиры в новом ЖК «Наследие» от ЖБК-1",
-    "link":  "/real-estate/news/169413/"
+    "ID": "169468",
+    "NAME": "Новая школа в Стрелецком-23.",
+    "DETAIL_PICTURE": "245679",
+    "PROPERTY_SLIDE_LINK_VALUE": "https:\/\/belbeton.ru\/corporation\/news\/gubernator-belgorodskoy-oblasti-vyacheslav-gladkov-posetil-novuyu-shkolu-v-streletskom-23\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903241",
+    "SORT": "200",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/3c8\/ohzpfjqv3yckgyxbgh24uafvesq21lbl.jpg"
   },
-
   {
-    "img":   "/v4sources/img/slides/nweScool.jpg",
-    "title": "Моя Школа",
-    "link":  "/corporation/news/v-poselke-repnoe-belgorodskogo-rayona-kompaniya-zhbk-1-postroila-shkolu-pokolenie-5-0-/"
+    "ID": "169464",
+    "NAME": "Моя Школа",
+    "DETAIL_PICTURE": "245675",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/corporation\/news\/v-poselke-repnoe-belgorodskogo-rayona-kompaniya-zhbk-1-postroila-shkolu-pokolenie-5-0-\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903237",
+    "SORT": "300",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/6aa\/5v2x9v5du3w050lblnv38a1mjcxqfn9r.jpg"
   },
-
   {
-    "img":   "/v4sources/img/slides/gold100.jpg",
-    "title": "100 лучших товаров России",
-    "link":  "/corporation/news/produktsiya-zavoda-zhbk-1-vnov-voshla-v-spisok-100-luchshikh-tovarov-rossiidgfd/"
+    "ID": "169469",
+    "NAME": "ЖК СЕВЕРНАЯ ЗВЕЗДА стал лучшим в Белгородской области",
+    "DETAIL_PICTURE": "245680",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/169403\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903242",
+    "SORT": "400",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/b50\/jsmcurrrcokny3d8jtawl1ei9vt9vc8z.jpg"
   },
-
   {
-    "img":   "/v4sources/img/slides/domDetstva.jpg",
-    "title": "Нашему Дому детства — 30 лет!",
-    "link":  "/corporation/news/rabotniki-korporatsii-zhbk-1-udostoilis-nagrad-raznogo-urovnya-ko-dnyu-stroitelya/"
+    "ID": "169465",
+    "NAME": "100 лучших товаров России",
+    "DETAIL_PICTURE": "245676",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/corporation\/news\/produktsiya-zavoda-zhbk-1-vnov-voshla-v-spisok-100-luchshikh-tovarov-rossiidgfd\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903238",
+    "SORT": "500",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/ae4\/bsk57mg4k82nu0q2dfqwwldaybyipg2m.jpg"
   },
-
   {
-    "img":   "/upload/iblock/9f7/03lub5zypmv4o0o3gn8a10r8pz16zrdm.jpg",
-    "title": "Квартиры 'под ключ' в ЖК «Новая Заря» от ЖБК-1 готовы к заселению!",
-    "link":  "/real-estate/news/169411/"
+    "ID": "169466",
+    "NAME": "Нашему Дому детства — 30 лет!",
+    "DETAIL_PICTURE": "245677",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/corporation\/news\/rabotniki-korporatsii-zhbk-1-udostoilis-nagrad-raznogo-urovnya-ko-dnyu-stroitelya\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903239",
+    "SORT": "600",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/862\/0d7p0u0dcbvszbaasoenolyxuyd5c19p.jpg"
   },
-
   {
-    "img":   "/upload/iblock/0a3/ltxd8x84i1w0uknfd5j9ijclet2uxs3v.jpg",
-    "title": "День работника ЖКХ",
-    "link":  "/wnc/press-about-us/spetsialisty-upravlyayushchikh-kompaniy-zhbk-1-poluchili-nagrady-v-chest-professionalnogo-prazdnika-/?bitrix_include_areas=N&clear_cache=Y"
-  },
-
-  {
-    "img":  "/upload/iblock/c28/1r6rxe64uizv8zc40nmzyim3iarjd7xy.jpg",
-    "title": "ЖК СЕВЕРНАЯ ЗВЕЗДА стал лучшим в Белгородской области",
-    "link":   "/real-estate/news/169403/"
+    "ID": "169467",
+    "NAME": "Квартиры 'под ключ' в ЖК «Новая Заря» от ЖБК-1 готовы к заселению!",
+    "DETAIL_PICTURE": "245678",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/169411\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903240",
+    "SORT": "700",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/2f4\/w6x4ntmo9rjp6n7xbwjou6x8fmdtxlbe.jpg"
   }
 ]

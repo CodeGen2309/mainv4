@@ -1,15 +1,15 @@
 <script setup>
-  import { onMounted, ref } from 'vue';
+  import { onMounted, ref, toRaw } from 'vue';
+  import apirator from '@/lib/apirator';
 
   import arrow from './icons/arrow.vue';
-  import slidesData from '/mocks/slides.json'
 
   let currentSlide = ref(0)
   let slideTicker = false
-  
+  let slidesData = ref([])
 
   function nextSlide () {    
-    let isLastSlide = currentSlide.value >= slidesData.length - 1
+    let isLastSlide = currentSlide.value >= slidesData.value.length - 1
 
     if (isLastSlide) { currentSlide.value = 0 } 
     else { currentSlide.value++ }
@@ -18,7 +18,7 @@
 
   function prevSlide () {
     let isFirstSlide = currentSlide.value <= 0
-    let lastSlide = currentSlide.value = slidesData.length - 1 
+    let lastSlide = currentSlide.value = slidesData.value.length - 1 
 
     if (isFirstSlide) { lastSlide }
     else { currentSlide.value-- }
@@ -42,7 +42,11 @@
   }
 
 
-  onMounted(() => { startSlider() })
+  onMounted( async () => {
+    slidesData.value = await apirator.getSlides().then(res => res.json())
+    console.log({ slides: toRaw(slidesData.value) })
+    startSlider() 
+  })
 </script>
 
 
@@ -52,7 +56,7 @@
       <img class="sld__img" loading="lazy"
         v-for="(item, index) in slidesData" :key="index"
         :class="{ 'sld__inactiveSlide': currentSlide != index }"
-        :src="item.img"
+        :src="item.DETAIL_PICTURE_FILE"
       >
 
       <div class="sld__cover"></div>
@@ -65,9 +69,9 @@
           <transition-group name = 'slideLeft'>
             <a v-for="(item, index) in slidesData" :key="index"
               class="sld__dockTitle"  v-show="currentSlide == index"
-              :href="item.link"
+              :href="item.PROPERTY_SLIDE_LINK_VALUE"
             >
-              {{ item.title }}
+              {{ item.NAME }}
             </a>
           </transition-group>
         </div>

@@ -1,10 +1,11 @@
 <script setup>
 import { animate, stagger } from 'motion';
-import { ref } from 'vue';
-import subMenuList          from '/mocks/subMenu.json'
+import { onMounted, ref }   from 'vue';
 
+import apirator             from '@/lib/apirator';
+import subMenuList          from '/mocks/subMenu.json'
 import sideMenu             from '@/components/sideMenu.vue';
-import tile                 from '../components/tile.vue';
+import tile                 from '@/components/tile.vue';
 import router               from '@/router';
 import mainSlider           from '@/components/mainSlider.vue';
 
