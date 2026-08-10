@@ -75,6 +75,7 @@ let breadcrumbLinks = [
       </div>
       <div class="header__breads">  
         <div class="header__main__breads">
+<<<<<<< HEAD
           <span v-for="(item, index) in breadcrumbLinks" :key="item.text" class="breadcrumb__wrapper">
             <a 
               :href="item.link"
@@ -85,6 +86,18 @@ let breadcrumbLinks = [
             <span v-if="index < breadcrumbLinks.length - 1" class="breadcrumb__separator">/</span>
           </span>
           <div class="head__inner"></div>
+=======
+          <span v-for="(item, index) in breadcrumbLinks" :key="item.text" class="breadcrumb-wrapper">
+            <a 
+              :href="item.link"
+              class="breadcrumb-link"
+            >
+              {{ item.text }}
+            </a>
+            <span v-if="index < breadcrumbLinks.length - 1" class="breadcrumb-separator">/</span>
+          </span>
+          <div class="head_inner"></div>
+>>>>>>> 69242d00373e6fdc9df3b43e3b9346ca8181a8f1
         </div>
       </div>  
     </div>
@@ -118,7 +131,12 @@ let breadcrumbLinks = [
 </transition>
 </template>
 
+<<<<<<< HEAD
 <style>
+=======
+
+<style scoped>
+>>>>>>> 69242d00373e6fdc9df3b43e3b9346ca8181a8f1
 
 .header {
   position: absolute;
@@ -213,7 +231,6 @@ let breadcrumbLinks = [
 }
 
 
-
 .header__menuIcon {
   width: 20px;
   cursor: pointer;
@@ -268,13 +285,21 @@ let breadcrumbLinks = [
   align-items: center;
 }
 
+<<<<<<< HEAD
 .breadcrumb__wrapper {
+=======
+.breadcrumb-wrapper {
+>>>>>>> 69242d00373e6fdc9df3b43e3b9346ca8181a8f1
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+<<<<<<< HEAD
 .breadcrumb__link {
+=======
+.breadcrumb-link {
+>>>>>>> 69242d00373e6fdc9df3b43e3b9346ca8181a8f1
   color: #333;
   text-decoration: none;
   font-weight: 400;
@@ -285,11 +310,19 @@ let breadcrumbLinks = [
   border: none;
 }
 
+<<<<<<< HEAD
 .breadcrumb__link:hover {
   color: rgba(72, 126, 176, 0.8);
 }
 
 .breadcrumb__separator {
+=======
+.breadcrumb-link:hover {
+  color: rgba(72, 126, 176, 0.8);
+}
+
+.breadcrumb-separator {
+>>>>>>> 69242d00373e6fdc9df3b43e3b9346ca8181a8f1
   color: #999;
   font-weight: 300;
 }
