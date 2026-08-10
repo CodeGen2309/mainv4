@@ -11,6 +11,15 @@ let mainMenu = gmenu.mainMenu
 
 let leaveTimeOut = null
 
+const breadcrumbLinks = [
+  { link: 'ldfs', text: 'Heloo' },
+  { link: 'ldfs', text: 'Heloo' },
+  { link: 'ldfs', text: 'Heloo' },
+  { link: 'ldfs', text: 'Heloo' },
+]
+
+
+
 function toggleMenu () {
   if (isMenuShow.value) {
     isMenuShow.value = false
@@ -75,6 +84,16 @@ let HeadLinks = [
         <img class="header__menuIcon" 
           src="/public/v4sources/icons/menu.svg"
         >
+      </div>
+
+      <div class="header__breads">
+        <a 
+          v-for="(item, index) in breadcrumbLinks" :key="item.text"
+          :href="item.link"
+          class="header__breadLink"
+        >
+          {{ item.text }}
+        </a>
       </div>
     </div>
   </div>
@@ -209,6 +228,41 @@ let HeadLinks = [
   width: 20px;
   cursor: pointer;
   padding-left: 20px;
+  padding-top: 5px;
+}
+
+
+.header__breads {
+  display: flex;
+}
+
+
+.header__breadLink {
+  position: relative;
+  display: block;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0px 10px;
+  transition: .3s;
+}
+
+.header__breadLink:hover {
+  background: rgba(0, 0, 0, .1);
+  /* background: black; */
+}
+
+.header__breadLink::after {
+  position: absolute;
+  content: '/';
+  padding: 0px 20px;
+  right: -20px;
+}
+
+
+.header__breadLink:last-child::after {
+  content: '';
 }
 
 

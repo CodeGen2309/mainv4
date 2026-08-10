@@ -25,7 +25,7 @@ let props = defineProps(['menu'])
       {{ item.text }}
 
       <div class="smenu__linkdec"></div>
-      <div class="smenu__linkdec_bot"></div>
+      <div class="smenu__linkdec smenu__linkdec_bot"></div>
     </div>
   </div>
 
@@ -108,11 +108,7 @@ let props = defineProps(['menu'])
 }
 
 .smenu__linkdec_bot {
-  position: absolute;
   bottom: -4px; left: 0;
-  width: 10%;
-  border-bottom: 1px solid rgba(0, 0, 0, .4);
-  transition: .5s;
 }
 
 

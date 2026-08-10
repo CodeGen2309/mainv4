@@ -3,6 +3,7 @@ import { animate, stagger } from 'motion';
 import { onMounted } from 'vue';
 import router from '@/router';
 
+
 let props = defineProps({
   'links': {default: []}, 
   'img': {default: ''}, 
@@ -11,6 +12,7 @@ let props = defineProps({
   'backColor': {default: 'rgba(0, 0, 0, .5)'},
   'frontColor': {default: 'rgba(0, 0, 0, .5)'},
 })
+
 
 function startAnim () {
   let covers, textItems, image, textCover
@@ -28,16 +30,17 @@ function startAnim () {
     // { duration: 1.2, delay: .5 }
   )
 
-
   animate(
     textItems, 
     { 
       opacity: [0, 1], 
       translateX: ['50px', '0'] 
     },
+
     { duration: .6, delay: .2 }
   )
 }
+
 
 function gotoLink (link) {
   let background, textHolder, textCover
@@ -73,6 +76,8 @@ function gotoLink (link) {
 
 }
 
+
+
 onMounted(() => {
   startAnim()
 })
@@ -106,6 +111,12 @@ onMounted(() => {
           :key="l.text" class="vCont__buttonItem">
           {{ l.text }}
         </p>
+
+        <a class="vCont__buttonItem" 
+          href="https://belbeton.ru/real-estate/construction/buildings/zhk_na_nekrasova/"
+        >
+          Купить квартиру
+        </a>
       </div>
     </div>
   </div>
@@ -219,6 +230,7 @@ onMounted(() => {
   margin: 0; padding: 0;
   background: rgba(255, 255, 255, .2);
   border: 1px solid rgba(255, 255, 255, .6);
+  color: white;
   padding: 15px 30px;
   transition: .3s;
   font-family: zekton;

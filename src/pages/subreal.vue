@@ -23,7 +23,7 @@ let desc = `
 
 let links = [
   {text: 'Подробнее', link: 'https://belbeton.ru/real-estate/price-list-for-property/'},
-  {text: 'Купить квартиру', link: 'https://belbeton.ru/real-estate/construction/buildings/zhk_na_nekrasova/'}
+  // {text: 'Купить квартиру', link: 'https://belbeton.ru/real-estate/construction/buildings/zhk_na_nekrasova/'}
 ]
 
 let tiles = [
