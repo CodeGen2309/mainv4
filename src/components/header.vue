@@ -75,16 +75,16 @@ let breadcrumbLinks = [
       </div>
       <div class="header__breads">  
         <div class="header__main__breads">
-          <span v-for="(item, index) in breadcrumbLinks" :key="item.text" class="breadcrumb-wrapper">
+          <span v-for="(item, index) in breadcrumbLinks" :key="item.text" class="breadcrumb__wrapper">
             <a 
               :href="item.link"
-              class="breadcrumb-link"
+              class="breadcrumb__link"
             >
               {{ item.text }}
             </a>
-            <span v-if="index < breadcrumbLinks.length - 1" class="breadcrumb-separator">/</span>
+            <span v-if="index < breadcrumbLinks.length - 1" class="breadcrumb__separator">/</span>
           </span>
-          <div class="head_inner"></div>
+          <div class="head__inner"></div>
         </div>
       </div>  
     </div>
@@ -268,13 +268,13 @@ let breadcrumbLinks = [
   align-items: center;
 }
 
-.breadcrumb-wrapper {
+.breadcrumb__wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.breadcrumb-link {
+.breadcrumb__link {
   color: #333;
   text-decoration: none;
   font-weight: 400;
@@ -285,11 +285,11 @@ let breadcrumbLinks = [
   border: none;
 }
 
-.breadcrumb-link:hover {
+.breadcrumb__link:hover {
   color: rgba(72, 126, 176, 0.8);
 }
 
-.breadcrumb-separator {
+.breadcrumb__separator {
   color: #999;
   font-weight: 300;
 }
