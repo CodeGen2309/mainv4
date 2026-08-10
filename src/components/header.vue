@@ -52,13 +52,10 @@ function changeSubMenu (menuItem) {
   }, 200)
 }
 
-
-
-// let HeadLinks = []
-let HeadLinks = [
-  {link: '#', text: 'Завод'},
-  {link: '#', text: 'Корпорация'},
-  {link: '#', text: 'Недвижимость'},
+let breadcrumbLinks = [
+  {link: '/catalog', text: 'Каталог'},
+  {link: '/offers', text: 'Предложения'},
+  {link: '/menu', text: 'Меню'},
 ]
 </script>
 
@@ -76,6 +73,20 @@ let HeadLinks = [
           src="/public/v4sources/icons/menu.svg"
         >
       </div>
+      <div class="header__breads">  
+        <div class="header__main__breads">
+          <span v-for="(item, index) in breadcrumbLinks" :key="item.text" class="breadcrumb-wrapper">
+            <a 
+              :href="item.link"
+              class="breadcrumb-link"
+            >
+              {{ item.text }}
+            </a>
+            <span v-if="index < breadcrumbLinks.length - 1" class="breadcrumb-separator">/</span>
+          </span>
+          <div class="head_inner"></div>
+        </div>
+      </div>  
     </div>
   </div>
 
@@ -107,9 +118,7 @@ let HeadLinks = [
 </transition>
 </template>
 
-
-
-<style scoped>
+<style>
 
 .header {
   position: absolute;
@@ -253,7 +262,37 @@ let HeadLinks = [
   display: none;
 }
 
+.header__main__breads {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
+.breadcrumb-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumb-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color 0.3s;
+  padding: 5px 0;
+  background: transparent;
+  border: none;
+}
+
+.breadcrumb-link:hover {
+  color: rgba(72, 126, 176, 0.8);
+}
+
+.breadcrumb-separator {
+  color: #999;
+  font-weight: 300;
+}
 
 @media (max-width: 900px) {
   .header {
@@ -268,5 +307,6 @@ let HeadLinks = [
     display: none;
   }
 }
+
 
 </style>
