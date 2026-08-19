@@ -8,13 +8,13 @@ let currpath = prodpath
 let myTiles = [
   {
     title: 'Строительные материалы', 
-    img: `${currpath}/v4sources/img/tiles/corp/akcii.jpg`,
-    link: 'https://belbeton.ru/building-materials/catalog/',
+    img:   `${currpath}/v4sources/img/tiles/corp/akcii.jpg`,
+    link:  'https://belbeton.ru/building-materials/catalog/',
   },
   {
     title: 'Купить квартиру', 
     img: `${currpath}/v4sources/img/tiles/corp/nedvnew.jpg`,
-    link: 'subreal',
+    route: 'subreal',
 
   },
   {

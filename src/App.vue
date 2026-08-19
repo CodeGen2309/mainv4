@@ -1,9 +1,12 @@
 <script setup>
+import router from '@/router';
 import Header from './components/header.vue';
-import { RouterView } from 'vue-router';
-import router from './router';
+import { RouterView, useRoute } from 'vue-router';
 import { animate } from 'motion';
+import { computed } from 'vue';
 
+const route = useRoute()
+const pageMeta = computed(() => route.meta)
 
 async function toggleMenu () {
   let curRoute = router.currentRoute.value.name
@@ -28,8 +31,11 @@ function print (ent) {
 
 <template>
   <Header class="header" 
-    @burgerClick="toggleMenu"
+    @burgerClick = "toggleMenu"
+    :phone="pageMeta.headerPhone"
+    :key="pageMeta.headerPhone"
   />
+
 
   <transition name="testAnim">
     <router-view v-slot="{ Component }">

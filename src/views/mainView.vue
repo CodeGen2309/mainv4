@@ -1,6 +1,6 @@
 <script setup>
 import { animate, stagger } from 'motion';
-import { onMounted, ref }   from 'vue';
+import { ref }   from 'vue';
 
 import apirator             from '@/lib/apirator';
 import subMenuList          from '/mocks/subMenu.json'
@@ -110,7 +110,8 @@ function print (ent) {
     <div class="app__tileList">
       <!-- TODO: пробросить в тайлы внешщие ссылки -->
       <tile class="app__tile" v-for="item, idx in tiles" :key="idx" 
-        :title="item.title" :img="item.img" :route="item.link"
+        :title="item.title" :img="item.img" :route="item.route"
+        :link="item.link"
       />
     </div>
   </section>

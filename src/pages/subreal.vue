@@ -1,8 +1,11 @@
 <script setup>
 import { onMounted } from 'vue'
+import { animate, inView } from 'motion'
+
+
 import slideBack from '../components/slideCover.vue'
 import tile from '../components/tile.vue'
-import { animate, inView } from 'motion'
+
 
 let gradient = `
   linear-gradient(

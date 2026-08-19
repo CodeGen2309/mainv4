@@ -1,6 +1,6 @@
 <script setup>
 import { animate, stagger } from 'motion';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import bigMenu from '/mocks/bigMenu.json'
 
 
@@ -91,6 +91,7 @@ async function changeSubMenu (index) {
   font-size: 16px;
 }
 
+
 .menup__pager {
   position: relative;
   display: flex;
@@ -123,6 +124,7 @@ async function changeSubMenu (index) {
   cursor: pointer;
   transition: .3s;
 }
+
 
 .menup__pagerItem:hover {
   color: white;

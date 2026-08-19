@@ -4,6 +4,9 @@ import { ref, Transition } from 'vue'
 import gmenu from '../../mocks/mainMenu.json'
 import menuSection from '@/components/menuSection.vue';
 
+let props = defineProps(['phone'])
+let headerPhone = props.phone || '+7 (4722) 37-63-33'
+
 let isMenuShow = ref(false)
 let isSubMenuShow = ref(false)
 let subMenu = ref({})
@@ -11,12 +14,6 @@ let mainMenu = gmenu.mainMenu
 
 let leaveTimeOut = null
 
-const breadcrumbLinks = [
-  { link: 'ldfs', text: 'Heloo' },
-  { link: 'ldfs', text: 'Heloo' },
-  { link: 'ldfs', text: 'Heloo' },
-  { link: 'ldfs', text: 'Heloo' },
-]
 
 
 
@@ -85,16 +82,6 @@ let HeadLinks = [
           src="/public/v4sources/icons/menu.svg"
         >
       </div>
-
-      <div class="header__breads">
-        <a 
-          v-for="(item, index) in breadcrumbLinks" :key="item.text"
-          :href="item.link"
-          class="header__breadLink"
-        >
-          {{ item.text }}
-        </a>
-      </div>
     </div>
   </div>
 
@@ -102,7 +89,7 @@ let HeadLinks = [
   <div class="header__phone">
     <div class="header__phone__inner">
       <img class="header__phoneImg" src="/public/v4sources/icons/phone.svg">
-      <p class="header__phoneText"> +7 (4722) 37-63-33 </p>
+      <p class="header__phoneText">{{ headerPhone }}</p>
     </div>
   </div>
 </header>
@@ -229,40 +216,6 @@ let HeadLinks = [
   cursor: pointer;
   padding-left: 20px;
   padding-top: 5px;
-}
-
-
-.header__breads {
-  display: flex;
-}
-
-
-.header__breadLink {
-  position: relative;
-  display: block;
-  color: black;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 0px 10px;
-  transition: .3s;
-}
-
-.header__breadLink:hover {
-  background: rgba(0, 0, 0, .1);
-  /* background: black; */
-}
-
-.header__breadLink::after {
-  position: absolute;
-  content: '/';
-  padding: 0px 20px;
-  right: -20px;
-}
-
-
-.header__breadLink:last-child::after {
-  content: '';
 }
 
 
