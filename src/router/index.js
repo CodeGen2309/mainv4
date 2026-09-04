@@ -13,7 +13,7 @@ const router = createRouter({
       path: '/subreal',
       name: 'subreal',
       component: () => import('../pages/subreal.vue'),
-      meta: { headerPhone: '33-38-38' },
+      meta: { headerPhone: '+7(4722) 33-38-38' },
     },
     {
       path: '/subzavod',

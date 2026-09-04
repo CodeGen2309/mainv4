@@ -4,8 +4,11 @@ import { ref, Transition } from 'vue'
 import gmenu from '../../mocks/mainMenu.json'
 import menuSection from '@/components/menuSection.vue';
 
-let props = defineProps(['phone'])
-let headerPhone = props.phone || '+7 (4722) 37-63-33'
+let props = defineProps({
+  phone: {default: '+7 (4722) 37-63-33'},
+})
+
+
 
 let isMenuShow = ref(false)
 let isSubMenuShow = ref(false)
@@ -89,7 +92,7 @@ let HeadLinks = [
   <div class="header__phone">
     <div class="header__phone__inner">
       <img class="header__phoneImg" src="/public/v4sources/icons/phone.svg">
-      <p class="header__phoneText">{{ headerPhone }}</p>
+      <p class="header__phoneText">{{ props.phone }}</p>
     </div>
   </div>
 </header>
