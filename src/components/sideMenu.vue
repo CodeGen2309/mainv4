@@ -57,12 +57,13 @@ let props = defineProps(['menu'])
 }
 
 .smenu__headNote {
+ font-size: 1.2rem;
  margin: 0; padding: 0;
  opacity: .6;
 }
 
 .smenu__logo {
-  width: 3rem;
+  height: 4rem;
 }
 
 .smenu__title {
@@ -81,7 +82,7 @@ let props = defineProps(['menu'])
 .smenu__subtitle {
   margin: 0; padding: 10px 0;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   font-family: 'montserrat';
 }

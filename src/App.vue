@@ -47,7 +47,8 @@ function print (ent) {
 
 <style>
 body {
-  margin: 0; padding: 20px;
+  margin: 0; 
+  padding: 20px;
 }
 
 
