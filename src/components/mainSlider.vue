@@ -53,12 +53,18 @@
 <template>
   <div class="sld" @mouseenter="stopSlider" @mouseleave="startSlider">
     <div class="sld__slides">
-      <img class="sld__img" loading="lazy"
+      <div class="sld__slide"
         v-for="(item, index) in slidesData" :key="index"
         :class="{ 'sld__inactiveSlide': currentSlide != index }"
-        :src="item.DETAIL_PICTURE_FILE"
       >
+        <img class="sld__backdrop" loading="lazy"
+          :src="item.DETAIL_PICTURE_FILE"
+        >
 
+        <img class="sld__img" loading="lazy"
+          :src="item.DETAIL_PICTURE_FILE"
+        >
+      </div>
       <div class="sld__cover"></div>
     </div>
 
@@ -116,11 +122,11 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     100deg,
     rgba(255, 255, 255, 1) 10%,
     rgba(0, 0, 0, 0) 50%
-  );
+  ); */
 }
 
 .sld__slides {
@@ -128,12 +134,28 @@
   width: 100%; height: 100%;;
 }
 
+.sld__slide {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: .5s;
+}
+
 .sld__img {
+  object-fit: contain;
+  object-position: top left;
+  transition: .5s;
+}
+
+.sld__backdrop {
   position: absolute;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: top left;
+  filter: blur(6px) brightness(.8);
+  opacity: .8;
   transition: .5s;
+  z-index: -1;
 }
 
 .sld__inactiveSlide {

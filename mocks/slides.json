@@ -1,21 +1,39 @@
 [
   {
-    "ID": "169463",
-    "NAME": "Квартиры в новом ЖК «Наследие» от ЖБК-1",
-    "DETAIL_PICTURE": "245674",
-    "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/169413\/",
-    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903236",
+    "ID": "170255",
+    "NAME": "Первого сентября в новой школе «Моя мечта»",
+    "DETAIL_PICTURE": "246629",
+    "PROPERTY_SLIDE_LINK_VALUE": "https:\/\/belbeton.ru\/corporation\/news\/pervogo-sentyabrya-v-novoy-shkole-moya-mechta-v-streletskom-23-prozvenel-pervyy-zvonok\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "991010520",
     "SORT": "100",
-    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/11d\/vzovi9uurnvhfaei3u8289ltcdbb108e.png"
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/418\/1myva1trt732g0co7rer01p1i34l5my5.jpg"
   },
   {
-    "ID": "169468",
-    "NAME": "Новая школа в Стрелецком-23.",
-    "DETAIL_PICTURE": "245679",
-    "PROPERTY_SLIDE_LINK_VALUE": "https:\/\/belbeton.ru\/corporation\/news\/gubernator-belgorodskoy-oblasti-vyacheslav-gladkov-posetil-novuyu-shkolu-v-streletskom-23\/",
-    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903241",
+    "ID": "169463",
+    "NAME": "Продажа квартир в новом доме ЖК «Новая Заря»",
+    "DETAIL_PICTURE": "246386",
+    "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/170172\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903236",
+    "SORT": "150",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/ec4\/tbv5u8r44wvlaovjb2d5yvrs6fj6kze4.jpg"
+  },
+  {
+    "ID": "170257",
+    "NAME": "Осенняя акция на тротуарную плитку «Колор микс» от Завода ЖБК-1!",
+    "DETAIL_PICTURE": "246632",
+    "PROPERTY_SLIDE_LINK_VALUE": "https:\/\/belbeton.ru\/building-materials\/news\/osennyaya-aktsiya-na-trotuarnuyu-plitku-kolor-miks-ot-zavoda-zhbk-1\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "991010525",
+    "SORT": "150",
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/ce3\/ln4pr9ojs5khubqm5ro5nvqrqdwuoq84.jpg"
+  },
+  {
+    "ID": "170199",
+    "NAME": "ЖБК-1 на городской Доске почёта",
+    "DETAIL_PICTURE": "246445",
+    "PROPERTY_SLIDE_LINK_VALUE": "https:\/\/belbeton.ru\/corporation\/news\/korporatsiya-zhbk-1-predstavlena-na-obnovlyennoy-gorodskoy-doske-pochyeta\/",
+    "PROPERTY_SLIDE_LINK_VALUE_ID": "990223478",
     "SORT": "200",
-    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/3c8\/ohzpfjqv3yckgyxbgh24uafvesq21lbl.jpg"
+    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/9f9\/j0rf1whg534x8aqr52w1l946sx29fmpn.jpg"
   },
   {
     "ID": "169464",
@@ -23,7 +41,7 @@
     "DETAIL_PICTURE": "245675",
     "PROPERTY_SLIDE_LINK_VALUE": "\/corporation\/news\/v-poselke-repnoe-belgorodskogo-rayona-kompaniya-zhbk-1-postroila-shkolu-pokolenie-5-0-\/",
     "PROPERTY_SLIDE_LINK_VALUE_ID": "987903237",
-    "SORT": "300",
+    "SORT": "600",
     "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/6aa\/5v2x9v5du3w050lblnv38a1mjcxqfn9r.jpg"
   },
   {
@@ -32,7 +50,7 @@
     "DETAIL_PICTURE": "245680",
     "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/169403\/",
     "PROPERTY_SLIDE_LINK_VALUE_ID": "987903242",
-    "SORT": "400",
+    "SORT": "700",
     "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/b50\/jsmcurrrcokny3d8jtawl1ei9vt9vc8z.jpg"
   },
   {
@@ -41,7 +59,7 @@
     "DETAIL_PICTURE": "245676",
     "PROPERTY_SLIDE_LINK_VALUE": "\/corporation\/news\/produktsiya-zavoda-zhbk-1-vnov-voshla-v-spisok-100-luchshikh-tovarov-rossiidgfd\/",
     "PROPERTY_SLIDE_LINK_VALUE_ID": "987903238",
-    "SORT": "500",
+    "SORT": "800",
     "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/ae4\/bsk57mg4k82nu0q2dfqwwldaybyipg2m.jpg"
   },
   {
@@ -50,16 +68,7 @@
     "DETAIL_PICTURE": "245677",
     "PROPERTY_SLIDE_LINK_VALUE": "\/corporation\/news\/rabotniki-korporatsii-zhbk-1-udostoilis-nagrad-raznogo-urovnya-ko-dnyu-stroitelya\/",
     "PROPERTY_SLIDE_LINK_VALUE_ID": "987903239",
-    "SORT": "600",
+    "SORT": "900",
     "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/862\/0d7p0u0dcbvszbaasoenolyxuyd5c19p.jpg"
-  },
-  {
-    "ID": "169467",
-    "NAME": "Квартиры 'под ключ' в ЖК «Новая Заря» от ЖБК-1 готовы к заселению!",
-    "DETAIL_PICTURE": "245678",
-    "PROPERTY_SLIDE_LINK_VALUE": "\/real-estate\/news\/169411\/",
-    "PROPERTY_SLIDE_LINK_VALUE_ID": "987903240",
-    "SORT": "700",
-    "DETAIL_PICTURE_FILE": "https:\/\/belbeton.ru\/upload\/iblock\/2f4\/w6x4ntmo9rjp6n7xbwjou6x8fmdtxlbe.jpg"
   }
 ]

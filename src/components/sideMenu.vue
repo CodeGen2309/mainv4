@@ -12,8 +12,11 @@ let props = defineProps(['menu'])
 <template>
 <div class="smenu">
   <div class="smenu__titleHolder">
-    <h1 class="smenu__title">{{ title }}</h1>
-    <p class="smenu__subtitle">{{ note }}</p>
+    <p class = "smenu__headNote">Группа компаний</p>
+    <h1 class="smenu__title">
+    <img class="smenu__logo" src="/public/v4sources/icons/logo.svg" alt="">
+    ЖБК - 1</h1>
+    <p class="smenu__subtitle">Созидание во имя <br> повышения качества жизни</p>
   </div>
 
 
@@ -30,11 +33,11 @@ let props = defineProps(['menu'])
   </div>
 
 
-  <div class="smenu__icons">
+  <!-- <div class="smenu__icons">
     <img class="smenu__icon" src="/public/v4sources/icons/vk.svg">
     <img class="smenu__icon" src="/public/v4sources/icons/telegram.svg">
     <img class="smenu__icon" src="/public/v4sources/icons/youtube.svg">
-  </div>
+  </div> -->
 </div>
 </template>
 
@@ -44,7 +47,7 @@ let props = defineProps(['menu'])
 .smenu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   gap: 50px;
   padding: 20px;
@@ -53,11 +56,21 @@ let props = defineProps(['menu'])
   box-sizing: border-box;
 }
 
+.smenu__headNote {
+ margin: 0; padding: 0;
+ opacity: .6;
+}
+
+.smenu__logo {
+  width: 3rem;
+}
+
 .smenu__title {
-  font-size: 30px;
-  color: rgba(0, 0, 0, .8);
-  letter-spacing: 4px;
-  padding: 10px 0; margin: 0;
+  font-size: 5rem;
+  color: rgb(116 185 255);
+  letter-spacing: 1px;
+  margin: 0;
+  /* padding: 10px 0; margin: 0; */
   /* font-family: 'zekton'; */
   font-family: 'montserrat';
   font-weight: 700;

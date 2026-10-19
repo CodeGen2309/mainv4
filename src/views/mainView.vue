@@ -147,7 +147,7 @@ body {
 
 .app__top {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 
   border-radius: 10px;
   overflow: hidden;
@@ -164,6 +164,7 @@ body {
   width: 100%;
   flex-grow: 1;
   overflow: hidden;
+  border-radius: 10px;
   transition: .3s;
 }
 
