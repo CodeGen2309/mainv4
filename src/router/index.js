@@ -16,11 +16,6 @@ const router = createRouter({
       meta: { headerPhone: '+7(4722) 33-38-38' },
     },
     {
-      path: '/subzavod',
-      name: 'subzavod',
-      component: () => import('../pages/subzavod.vue'),
-    },
-    {
       path: '/corp',
       name: 'corp',
       component: () => import('../pages/corp.vue'),
