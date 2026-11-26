@@ -8,6 +8,7 @@ import { computed } from 'vue';
 const route = useRoute()
 const pageMeta = computed(() => route.meta)
 
+
 async function toggleMenu () {
   let curRoute = router.currentRoute.value.name
   let nextRoute = curRoute == 'menu' ? '/' : '/menu'
